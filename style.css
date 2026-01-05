@@ -1,32 +1,42 @@
+/* =========================
+   GLOBAL SETTINGS
+   ========================= */
 body {
   margin: 0;
   font-family: Georgia, "Times New Roman", serif;
   background: #f7f9fc;
+  color: #000;
 }
 
-/* Layout */
+/* =========================
+   MAIN LAYOUT
+   ========================= */
 .container {
   display: flex;
-  width: 100%;
   min-height: 100vh;
+  width: 100%;
 }
 
-/* Sidebar */
+/* =========================
+   LEFT SIDEBAR MENU
+   ========================= */
 .sidebar {
-  width: 220px;
+  width: 230px;
   background: #eef2f7;
   padding: 20px;
   border-right: 1px solid #ccc;
 }
 
-.sidebar .name {
+.sidebar h2 {
+  margin-top: 0;
   font-size: 20px;
-  margin-bottom: 20px;
+  font-weight: bold;
 }
 
 .menu {
   list-style: none;
-  padding: 0;
+  padding-left: 0;
+  margin-top: 20px;
 }
 
 .menu li {
@@ -36,20 +46,25 @@ body {
 .menu a {
   text-decoration: none;
   color: #1a4fa3;
+  font-size: 15px;
 }
 
 .menu a:hover {
   text-decoration: underline;
 }
 
-/* Content */
+/* =========================
+   MAIN CONTENT AREA
+   ========================= */
 .content {
   flex: 1;
   padding: 30px 40px;
-  background: white;
+  background: #ffffff;
 }
 
-/* Vertical colored borders */
+/* =========================
+   COLORED VERTICAL BORDERS
+   ========================= */
 .border-blue {
   border-left: 6px solid #1a4fa3;
 }
@@ -66,14 +81,50 @@ body {
   border-left: 6px solid #6a1b9a;
 }
 
-/* Headings */
+/* =========================
+   HEADINGS
+   ========================= */
 h1 {
   margin-top: 0;
+  font-size: 28px;
   color: #1a4fa3;
 }
 
 h2 {
   margin-top: 30px;
+  font-size: 20px;
   color: #1a4fa3;
   border-bottom: 1px solid #ddd;
+  padding-bottom: 4px;
+}
+
+/* =========================
+   TEXT & LINKS
+   ========================= */
+p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+a {
+  color: #1a4fa3;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   LISTS
+   ========================= */
+ul {
+  padding-left: 20px;
+}
+
+ol {
+  padding-left: 25px;
+}
+
+li {
+  margin-bottom: 6px;
 }
