@@ -1,0 +1,20 @@
+<h1>Modeling Tools & Codes</h1>
+<hr>
+
+<h2>Molecular Dynamics</h2>
+<ul>
+  <li>LAMMPS (EAM, MEAM, SNAP, MLIP)</li>
+  <li>Matlantis / ASE</li>
+</ul>
+
+<h2>Programming & Data</h2>
+<ul>
+  <li>Python (NumPy, SciPy, Matplotlib, ML workflows)</li>
+  <li>MATLAB (numerical modeling, post-processing)</li>
+</ul>
+
+<h2>First-Principles & Multiscale</h2>
+<ul>
+  <li>VASP, CASTEP</li>
+  <li>CALPHAD & ICME integration</li>
+</ul>
