@@ -97,6 +97,14 @@ hr {
 p, ul {
   line-height: 1.7;
 }
+/* Highlight boxes for emphasis */
+.highlight {
+  background-color: #f0f7ff;
+  border-left: 5px solid #1f3a5f;
+  padding: 12px 16px;
+  margin: 15px 0;
+}
+
 
 .affiliation {
   line-height: 1.6;
