@@ -1,20 +1,192 @@
+/* =========================
+   GLOBAL RESET & BASE
+   ========================= */
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
+    padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #000;
+    background-color: #ffffff;
 }
+
+/* =========================
+   MAIN LAYOUT
+   ========================= */
 
 .container {
     display: flex;
     min-height: 100vh;
+    width: 100%;
 }
 
+/* =========================
+   SIDEBAR
+   ========================= */
+
 .sidebar {
-    width: 230px;
-    padding: 20px;
+    width: 240px;
+    padding: 20px 15px;
     border-right: 3px solid #1f4ed8;
+    background-color: #ffffff;
 }
 
 .sidebar h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 20px;
     color: #1f4ed8;
+    font-weight: bold;
+}
+
+/* Navigation list */
+.nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav li {
+    margin-bottom: 8px;
+}
+
+/* Navigation links */
+.nav a {
+    display: block;
+    padding: 7px 10px;
+    text-decoration: none;
+    color: #000;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+/* Hover effect */
+.nav a:hover {
+    background-color: #eef3ff;
+}
+
+/* Active page */
+.nav a.active {
+    background-color: #e6eeff;
+    color: #1f4ed8;
+    font-weight: bold;
+}
+
+/* =========================
+   MAIN CONTENT AREA
+   ========================= */
+
+.content {
+    flex: 1;
+    padding: 30px 40px;
+}
+
+/* =========================
+   HEADINGS
+   ========================= */
+
+h1 {
+    font-size: 28px;
+    color: #1f4ed8;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 17px;
+    margin-top: 20px;
+}
+
+/* Section titles (used across pages) */
+.section-title {
+    color: #1f4ed8;
+}
+
+/* =========================
+   TEXT ELEMENTS
+   ========================= */
+
+p {
+    margin: 10px 0;
+}
+
+ul {
+    margin-top: 10px;
     margin-bottom: 20px;
+    padding-left: 22px;
+}
+
+li {
+    margin-bottom: 6px;
+}
+
+/* Horizontal rule */
+hr {
+    border: none;
+    border-top: 1px solid #cccccc;
+    margin: 15px 0 25px 0;
+}
+
+/* =========================
+   LINKS IN CONTENT
+   ========================= */
+
+.content a {
+    color: #1f4ed8;
+    text-decoration: none;
+}
+
+.content a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   TABLES (if used later)
+   ========================= */
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 15px 0;
+}
+
+th, td {
+    border: 1px solid #cccccc;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f3f6ff;
+}
+
+/* =========================
+   SMALL SCREENS (OPTIONAL)
+   ========================= */
+
+@media (max-width: 800px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 3px solid #1f4ed8;
+    }
+
+    .content {
+        padding: 20px;
+    }
 }
