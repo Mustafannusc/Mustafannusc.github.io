@@ -1,130 +1,62 @@
-/* =========================
-   GLOBAL SETTINGS
-   ========================= */
 body {
-  margin: 0;
-  font-family: Georgia, "Times New Roman", serif;
-  background: #f7f9fc;
-  color: #000;
+    margin: 0;
+    font-family: "Georgia", serif;
+    background-color: #ffffff;
 }
 
-/* =========================
-   MAIN LAYOUT
-   ========================= */
+/* Layout */
 .container {
-  display: flex;
-  min-height: 100vh;
-  width: 100%;
+    display: flex;
+    min-height: 100vh;
 }
 
-/* =========================
-   LEFT SIDEBAR MENU
-   ========================= */
+/* Sidebar */
 .sidebar {
-  width: 230px;
-  background: #eef2f7;
-  padding: 20px;
-  border-right: 1px solid #ccc;
+    width: 240px;
+    background-color: #f7f9fc;
+    border-right: 4px solid #1f4fbf;
+    padding: 20px;
 }
 
 .sidebar h2 {
-  margin-top: 0;
-  font-size: 20px;
-  font-weight: bold;
+    margin-top: 0;
+    color: #1f4fbf;
+    font-size: 22px;
 }
 
-.menu {
-  list-style: none;
-  padding-left: 0;
-  margin-top: 20px;
+.sidebar a {
+    display: block;
+    padding: 8px 12px;
+    margin: 4px 0;
+    text-decoration: none;
+    color: #000;
+    border-left: 4px solid transparent;
 }
 
-.menu li {
-  margin-bottom: 10px;
+.sidebar a:hover {
+    background-color: #e8eefc;
 }
 
-.menu a {
-  text-decoration: none;
-  color: #1a4fa3;
-  font-size: 15px;
+/* Active page highlight */
+.sidebar a.active {
+    font-weight: bold;
+    color: #1f4fbf;
+    border-left: 4px solid #1f4fbf;
+    background-color: #e8eefc;
 }
 
-.menu a:hover {
-  text-decoration: underline;
-}
-
-/* =========================
-   MAIN CONTENT AREA
-   ========================= */
+/* Main content */
 .content {
-  flex: 1;
-  padding: 30px 40px;
-  background: #ffffff;
+    flex: 1;
+    padding: 40px;
 }
 
-/* =========================
-   COLORED VERTICAL BORDERS
-   ========================= */
-.border-blue {
-  border-left: 6px solid #1a4fa3;
-}
-
-.border-green {
-  border-left: 6px solid #2e8b57;
-}
-
-.border-red {
-  border-left: 6px solid #8b0000;
-}
-
-.border-purple {
-  border-left: 6px solid #6a1b9a;
-}
-
-/* =========================
-   HEADINGS
-   ========================= */
 h1 {
-  margin-top: 0;
-  font-size: 28px;
-  color: #1a4fa3;
+    color: #1f4fbf;
 }
 
-h2 {
-  margin-top: 30px;
-  font-size: 20px;
-  color: #1a4fa3;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 4px;
-}
-
-/* =========================
-   TEXT & LINKS
-   ========================= */
-p {
-  font-size: 15px;
-  line-height: 1.6;
-}
-
-a {
-  color: #1a4fa3;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* =========================
-   LISTS
-   ========================= */
-ul {
-  padding-left: 20px;
-}
-
-ol {
-  padding-left: 25px;
-}
-
-li {
-  margin-bottom: 6px;
+.section-title {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-top: 30px;
 }
