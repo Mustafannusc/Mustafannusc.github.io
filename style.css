@@ -17,41 +17,6 @@ body {
 }
 
 /* =========================
-   PROFILE BADGES
-   ========================= */
-
-.profile-links {
-  margin: 12px 0 22px 0;
-}
-
-.badge {
-  display: inline-block;
-  width: 32px;
-  height: 32px;
-  line-height: 32px;
-  margin-right: 6px;
-  text-align: center;
-  font-weight: bold;
-  font-size: 13px;
-  border-radius: 50%;
-  color: #fff;
-  text-decoration: none;
-}
-
-.badge-orcid { background-color: #A6CE39; }
-.badge-scholar { background-color: #4285F4; }
-.badge-lab { background-color: #1f4ed8; }
-.badge-github { background-color: #333; }
-.badge-rg { background-color: #00CCBB; }
-.badge-linkedin { background-color: #0A66C2; }
-
-.badge:hover {
-  opacity: 0.85;
-}
-
-
-
-/* =========================
    MAIN LAYOUT
    ========================= */
 
@@ -101,12 +66,10 @@ body {
     transition: background-color 0.2s ease;
 }
 
-/* Hover effect */
 .nav a:hover {
     background-color: #eef3ff;
 }
 
-/* Active page */
 .nav a.active {
     background-color: #e6eeff;
     color: #1f4ed8;
@@ -143,7 +106,6 @@ h3 {
     margin-top: 20px;
 }
 
-/* Section titles (used across pages) */
 .section-title {
     color: #1f4ed8;
 }
@@ -166,7 +128,6 @@ li {
     margin-bottom: 6px;
 }
 
-/* Horizontal rule */
 hr {
     border: none;
     border-top: 1px solid #cccccc;
@@ -174,7 +135,7 @@ hr {
 }
 
 /* =========================
-   LINKS IN CONTENT
+   CONTENT LINKS
    ========================= */
 
 .content a {
@@ -187,7 +148,7 @@ hr {
 }
 
 /* =========================
-   TABLES (if used later)
+   TABLES
    ========================= */
 
 table {
@@ -207,7 +168,132 @@ th {
 }
 
 /* =========================
-   SMALL SCREENS (OPTIONAL)
+   PROFILE LINK BADGES (FINAL – SINGLE VERSION)
+   ========================= */
+
+.profile-links {
+    margin: 12px 0 20px 0;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    margin-right: 6px;
+    border-radius: 50%;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #1f4ed8;
+    border: 1.5px solid #1f4ed8;
+    transition: all 0.2s ease;
+}
+
+.badge:hover {
+    background-color: #1f4ed8;
+    color: #ffffff;
+}
+
+/* =========================
+   FORMS (CONTACT PAGE)
+   ========================= */
+
+form {
+    max-width: 500px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+}
+
+input[type="submit"] {
+    width: auto;
+    padding: 8px 16px;
+    background-color: #1f4ed8;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #163bb8;
+}
+
+/* =========================
+   GALLERY
+   ========================= */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 24px;
+    margin-top: 25px;
+}
+
+.gallery-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    background: #fafafa;
+    text-align: center;
+}
+
+.gallery-item figcaption {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #0033cc;
+    font-size: 0.95em;
+}
+
+.gallery-item img {
+    width: 100%;
+    max-height: 220px;
+    object-fit: contain;
+    border: 1px solid #ccc;
+    transition: transform 0.25s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.03);
+    cursor: zoom-in;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.site-footer {
+    margin-top: 60px;
+    font-size: 14px;
+    color: #444;
+}
+
+.site-footer p {
+    margin: 10px 0 0 0;
+}
+
+/* =========================
+   VISITOR COUNTER (SMALL, CORNER)
+   ========================= */
+
+.visitor-counter {
+    position: fixed;
+    bottom: 8px;
+    right: 12px;
+    font-size: 13px;
+    color: #666;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    z-index: 1000;
+}
+
+/* =========================
+   SMALL SCREENS
    ========================= */
 
 @media (max-width: 800px) {
@@ -225,127 +311,3 @@ th {
         padding: 20px;
     }
 }
-form {
-  max-width: 500px;
-}
-
-input, textarea {
-  width: 100%;
-  padding: 8px;
-  font-size: 14px;
-}
-
-input[type="submit"] {
-  width: auto;
-  padding: 8px 16px;
-  background-color: #1f4ed8;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-input[type="submit"]:hover {
-  background-color: #163bb8;
-}
-/* =====================
-   FOOTER
-===================== */
-.site-footer {
-  margin-top: 60px;
-  font-size: 14px;
-  color: #444;
-}
-
-.site-footer p {
-  margin: 10px 0 0 0;
-}
-/* =========================
-   GALLERY STYLES
-   ========================= */
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 24px;
-  margin-top: 25px;
-}
-
-.gallery-item {
-  border: 1px solid #ddd;
-  padding: 10px;
-  background: #fafafa;
-  text-align: center;
-}
-
-.gallery-item figcaption {
-  font-weight: 600;
-  margin-bottom: 8px;
-  color: #0033cc;
-  font-size: 0.95em;
-}
-
-.gallery-item img {
-  width: 100%;
-  max-height: 220px;
-  object-fit: contain;
-  border: 1px solid #ccc;
-  transition: transform 0.25s ease;
-}
-
-.gallery-item img:hover {
-  transform: scale(1.03);
-  cursor: zoom-in;
-}
-/* =========================
-   VISITOR COUNTER (FOOTER)
-   ========================= */
-
-.visitor-counter {
-  position: fixed;
-  bottom: 8px;
-  right: 12px;
-  font-size: 14px;
-  color: #666;
-  background: rgba(255, 255, 255, 0.9);
-  padding: 4px 8px;
-  border-radius: 4px;
-  border: 1px solid #ddd;
-  z-index: 1000;
-}
-/* =========================
-   PROFILE LINK BADGES
-   ========================= */
-
-.profile-links {
-  margin: 12px 0 18px 0;
-}
-
-.badge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 28px;
-  height: 28px;
-  margin-right: 6px;
-  border-radius: 50%;
-  font-size: 13px;
-  font-weight: bold;
-  text-decoration: none;
-  color: #1f4ed8;
-  border: 1px solid #1f4ed8;
-}
-
-.badge:hover {
-  background-color: #1f4ed8;
-  color: #ffffff;
-}
-
-/* Optional subtle differentiation */
-.badge-orcid { }
-.badge-scholar { }
-.badge-lab { }
-.badge-github { }
-.badge-rg { }
-.badge-linkedin { }
-
-
