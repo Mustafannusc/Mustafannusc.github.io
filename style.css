@@ -261,3 +261,21 @@ input[type="submit"]:hover {
   transform: scale(1.03);
   cursor: zoom-in;
 }
+<div class="gallery-grid">
+
+  <figure class="gallery-item">
+    <figcaption>Laboratory Work – 2022 (Jan)</figcaption>
+    <a href="images/lab/2022/lab_2022_01.png" target="_blank">
+      <img src="images/lab/2022/lab_2022_01.png" alt="Lab work 2022">
+    </a>
+  </figure>
+
+  <figure class="gallery-item">
+    <figcaption>Laboratory Work – 2022 (Mar)</figcaption>
+    <a href="images/lab/2022/lab_2022_02.png" target="_blank">
+      <img src="images/lab/2022/lab_2022_02.png" alt="Lab work 2022">
+    </a>
+  </figure>
+
+</div>
+
