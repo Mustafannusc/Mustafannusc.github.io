@@ -190,3 +190,25 @@ th {
         padding: 20px;
     }
 }
+form {
+  max-width: 500px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+}
+
+input[type="submit"] {
+  width: auto;
+  padding: 8px 16px;
+  background-color: #1f4ed8;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #163bb8;
+}
