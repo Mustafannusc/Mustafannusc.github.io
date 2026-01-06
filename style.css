@@ -17,6 +17,41 @@ body {
 }
 
 /* =========================
+   PROFILE BADGES
+   ========================= */
+
+.profile-links {
+  margin: 12px 0 22px 0;
+}
+
+.badge {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  margin-right: 6px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 13px;
+  border-radius: 50%;
+  color: #fff;
+  text-decoration: none;
+}
+
+.badge-orcid { background-color: #A6CE39; }
+.badge-scholar { background-color: #4285F4; }
+.badge-lab { background-color: #1f4ed8; }
+.badge-github { background-color: #333; }
+.badge-rg { background-color: #00CCBB; }
+.badge-linkedin { background-color: #0A66C2; }
+
+.badge:hover {
+  opacity: 0.85;
+}
+
+
+
+/* =========================
    MAIN LAYOUT
    ========================= */
 
