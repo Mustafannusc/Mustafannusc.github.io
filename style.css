@@ -212,3 +212,15 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: #163bb8;
 }
+/* =====================
+   FOOTER
+===================== */
+.site-footer {
+  margin-top: 60px;
+  font-size: 14px;
+  color: #444;
+}
+
+.site-footer p {
+  margin: 10px 0 0 0;
+}
