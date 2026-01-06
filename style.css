@@ -224,3 +224,40 @@ input[type="submit"]:hover {
 .site-footer p {
   margin: 10px 0 0 0;
 }
+/* =========================
+   GALLERY STYLES
+   ========================= */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 25px;
+}
+
+.gallery-item {
+  border: 1px solid #ddd;
+  padding: 10px;
+  background: #fafafa;
+  text-align: center;
+}
+
+.gallery-item figcaption {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #0033cc;
+  font-size: 0.95em;
+}
+
+.gallery-item img {
+  width: 100%;
+  max-height: 220px;
+  object-fit: contain;
+  border: 1px solid #ccc;
+  transition: transform 0.25s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.03);
+  cursor: zoom-in;
+}
