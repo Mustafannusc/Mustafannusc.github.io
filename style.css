@@ -262,4 +262,15 @@ input[type="submit"]:hover {
   cursor: zoom-in;
 }
 
+/* =========================
+   VISITOR COUNTER
+   ========================= */
+
+.visitor-box {
+  margin-top: 30px;
+  padding: 10px 15px;
+  background-color: #f3f6ff;
+  border-left: 4px solid #1f4ed8;
+  font-size: 14px;
+}
 
