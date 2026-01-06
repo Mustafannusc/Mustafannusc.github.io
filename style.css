@@ -277,4 +277,40 @@ input[type="submit"]:hover {
   border: 1px solid #ddd;
   z-index: 1000;
 }
+/* =========================
+   PROFILE LINK BADGES
+   ========================= */
+
+.profile-links {
+  margin: 12px 0 18px 0;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  margin-right: 6px;
+  border-radius: 50%;
+  font-size: 13px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #1f4ed8;
+  border: 1px solid #1f4ed8;
+}
+
+.badge:hover {
+  background-color: #1f4ed8;
+  color: #ffffff;
+}
+
+/* Optional subtle differentiation */
+.badge-orcid { }
+.badge-scholar { }
+.badge-lab { }
+.badge-github { }
+.badge-rg { }
+.badge-linkedin { }
+
 
