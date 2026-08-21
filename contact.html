@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Contact – Dr. M. Mustafa Azeem </title>
   <link rel="stylesheet" href="style.css">
+  <script src="js/site.js" defer></script>
 </head>
 
 <body>
@@ -60,7 +61,7 @@
     <h2>Leave a Message</h2>
 
     <!-- Simple mail-based form -->
-    <form action="mailto:mazeem@wpi.edu" method="post" enctype="text/plain">
+    <form data-mailto="mazeem@wpi.edu">
 
       <label>Name:</label><br>
       <input type="text" name="name" required><br><br>
@@ -72,6 +73,7 @@
       <textarea name="message" rows="6" required></textarea><br><br>
 
       <input type="submit" value="Send Message">
+      <p class="form-status" role="status" aria-live="polite"></p>
 
     </form>
 
