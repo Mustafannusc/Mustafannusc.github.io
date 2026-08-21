@@ -2,17 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.googletagmanager.com; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; style-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' mailto:">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Dr. M. Mustafa Azeem</title>
   <link rel="stylesheet" href="style.css">
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-X4L3MMHMG0"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-X4L3MMHMG0');
-  </script>
+  <script async src="analytics.js"></script>
 </head>
 
 <body>
@@ -51,27 +48,27 @@
 
 <p class="profile-links">
   <a href="https://orcid.org/0000-0002-3212-2139"
-     target="_blank"
+     target="_blank" rel="noopener noreferrer"
      class="badge badge-orcid"
      title="ORCID: 0000-0002-3212-2139">O</a>
   <a href="https://scholar.google.com/citations?user=Tax2opcAAAAJ"
-     target="_blank"
+     target="_blank" rel="noopener noreferrer"
      class="badge badge-scholar"
      title="Google Scholar Profile">G</a>
   <a href="https://wp.wpi.edu/impd/"
-     target="_blank"
+     target="_blank" rel="noopener noreferrer"
      class="badge badge-lab"
      title="Current Lab (IMPD, WPI)">CL</a>
   <a href="https://www.researchgate.net/profile/Mmustafa-Azeem"
-     target="_blank"
+     target="_blank" rel="noopener noreferrer"
      class="badge badge-rg"
      title="ResearchGate">RG</a>
   <a href="https://www.linkedin.com/in/m-mustafa-azeem-904349114/"
-     target="_blank"
+     target="_blank" rel="noopener noreferrer"
      class="badge badge-linkedin"
      title="LinkedIn">LiIn</a>
   <a href="https://github.com/Mustafannusc"
-     target="_blank"
+     target="_blank" rel="noopener noreferrer"
      class="badge badge-github"
      title="github">GH</a>
 </p>
@@ -101,19 +98,9 @@
 <!-- ================= FOOTER ================= -->
 <footer class="site-footer">
 
-  <!-- Small visitor counter (bottom-right) -->
-  <div class="visitor-counter">
-    👁️ <span id="busuanzi_value_site_uv">0</span>
-    &nbsp;|&nbsp;
-    📄 <span id="busuanzi_value_site_pv">0</span>
-  </div>
-
   <hr>
   <p>© 2026 Mustafa Azeem. All rights reserved.</p>
 </footer>
-
-<!-- Visitor counter script -->
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 </body>
 </html>
