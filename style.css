@@ -922,3 +922,24 @@ body::after {
         opacity: 0.92;
     }
 }
+/* ==========================================================
+   LAB LOGO
+   ========================================================== */
+
+.lab-logo-box {
+    text-align: center;
+    margin: 0 0 22px 0;
+    padding: 8px;
+    border: 1px solid #d7e0f5;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+}
+
+.lab-logo {
+    display: block;
+    width: 100%;
+    max-width: 160px;
+    height: auto;
+    margin: 0 auto;
+}
