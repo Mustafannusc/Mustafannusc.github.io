@@ -888,7 +888,7 @@ body::after {
     width: 115px;
     height: 82px;
 
-    background-image: url("LOG%20MY%20LAB.gif");
+    background-image: url("/LOG%20MY%20LAB.gif");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
