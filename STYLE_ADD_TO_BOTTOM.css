@@ -1,0 +1,37 @@
+
+/* === Gallery folder navigation === */
+.gallery-folder-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 22px;
+    margin-top: 28px;
+}
+.gallery-folder-card {
+    display: block;
+    padding: 20px;
+    border: 1px solid #d9e0ee;
+    border-radius: 8px;
+    background: #fafcff;
+    text-decoration: none;
+}
+.gallery-folder-card:hover {
+    text-decoration: none;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+.gallery-folder-card h2 {
+    margin-top: 0;
+    color: #1f4ed8;
+}
+.gallery-folder-card span {
+    font-weight: 600;
+    color: #1f4ed8;
+}
+.standalone-gallery {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.gallery-notice {
+    padding: 16px;
+    border: 1px solid #ddd;
+    background: #fafafa;
+}
