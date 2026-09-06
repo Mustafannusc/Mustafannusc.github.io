@@ -6,10 +6,6 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     margin: 0;
     padding: 0;
@@ -28,8 +24,6 @@ body {
     display: flex;
     min-height: 100vh;
     width: 100%;
-    position: relative;
-    z-index: 1;
 }
 
 /* =========================
@@ -38,12 +32,9 @@ body {
 
 .sidebar {
     width: 240px;
-    flex: 0 0 240px;
     padding: 20px 15px;
     border-right: 3px solid #1f4ed8;
     background-color: #ffffff;
-    position: relative;
-    z-index: 2;
 }
 
 .sidebar h2 {
@@ -52,11 +43,6 @@ body {
     font-size: 20px;
     color: #1f4ed8;
     font-weight: bold;
-}
-
-/* Hide old logo that may still exist in HTML sidebars */
-.lab-logo-box {
-    display: none !important;
 }
 
 /* Navigation list */
@@ -70,13 +56,14 @@ body {
     margin-bottom: 8px;
 }
 
+/* Navigation links */
 .nav a {
     display: block;
     padding: 7px 10px;
     text-decoration: none;
     color: #000;
     border-radius: 4px;
-    transition: background-color 0.2s ease, color 0.2s ease;
+    transition: background-color 0.2s ease;
 }
 
 .nav a:hover {
@@ -95,44 +82,7 @@ body {
 
 .content {
     flex: 1;
-    min-width: 0;
     padding: 30px 40px;
-    position: relative;
-    z-index: 1;
-}
-
-/* =========================
-   GLOBAL LAB LOGO
-   TOP-RIGHT ON EVERY PAGE
-   ========================= */
-
-body::after {
-    content: "";
-    position: fixed;
-    top: 118px;
-    right: 30px;
-    width: 165px;
-    height: 165px;
-
-    background-image: url("https://mustafannusc.github.io/LOG%20MY%20LAB.gif");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-
-    z-index: 50;
-    pointer-events: none;
-    filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.10));
-}
-
-/* Reserve space in top hero/header areas so the logo does not cover text */
-.home-hero,
-.publications-hero,
-.teaching-hero {
-    padding-right: 220px;
-}
-
-.standalone-gallery {
-    padding-right: 220px;
 }
 
 /* =========================
@@ -207,8 +157,7 @@ table {
     margin: 15px 0;
 }
 
-th,
-td {
+th, td {
     border: 1px solid #cccccc;
     padding: 8px;
     text-align: left;
@@ -219,7 +168,7 @@ th {
 }
 
 /* =========================
-   PROFILE LINK BADGES
+   PROFILE LINK BADGES (FINAL – SINGLE VERSION)
    ========================= */
 
 .profile-links {
@@ -230,12 +179,10 @@ th {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: auto;
-    min-width: 34px;
+    width: 30px;
     height: 30px;
     margin-right: 6px;
-    padding: 0 8px;
-    border-radius: 18px;
+    border-radius: 50%;
     font-size: 13px;
     font-weight: bold;
     text-decoration: none;
@@ -250,15 +197,14 @@ th {
 }
 
 /* =========================
-   FORMS
+   FORMS (CONTACT PAGE)
    ========================= */
 
 form {
     max-width: 500px;
 }
 
-input,
-textarea {
+input, textarea {
     width: 100%;
     padding: 8px;
     font-size: 14px;
@@ -323,8 +269,6 @@ input[type="submit"]:hover {
     margin-top: 60px;
     font-size: 14px;
     color: #444;
-    position: relative;
-    z-index: 1;
 }
 
 .site-footer p {
@@ -332,7 +276,7 @@ input[type="submit"]:hover {
 }
 
 /* =========================
-   VISITOR COUNTER
+   VISITOR COUNTER (SMALL, CORNER)
    ========================= */
 
 .visitor-counter {
@@ -348,6 +292,25 @@ input[type="submit"]:hover {
     z-index: 1000;
 }
 
+/* =========================
+   SMALL SCREENS
+   ========================= */
+
+@media (max-width: 800px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 3px solid #1f4ed8;
+    }
+
+    .content {
+        padding: 20px;
+    }
+}
 /* ==========================================================
    UPDATED RESEARCH GALLERY
    ========================================================== */
@@ -403,9 +366,8 @@ input[type="submit"]:hover {
     font-weight: 600;
 }
 
-/* =========================
-   VIDEOS
-   ========================= */
+
+/* ================= VIDEOS ================= */
 
 .video-grid {
     display: grid;
@@ -431,6 +393,26 @@ input[type="submit"]:hover {
     border: 1px solid #ccc;
 }
 
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 800px) {
+
+    .publication-item img {
+        height: auto;
+        max-height: 420px;
+    }
+
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .video-card video {
+        max-height: none;
+    }
+
+}
+
 /* ==========================================================
    RESEARCH GALLERY LANDING PAGE
    ========================================================== */
@@ -448,7 +430,11 @@ input[type="submit"]:hover {
     padding: 24px 22px;
     border: 2px solid #d7e0f5;
     border-radius: 12px;
-    background: linear-gradient(180deg, #ffffff 0%, #f7f9ff 100%);
+    background: linear-gradient(
+        180deg,
+        #ffffff 0%,
+        #f7f9ff 100%
+    );
     text-decoration: none;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
     transition:
@@ -458,6 +444,7 @@ input[type="submit"]:hover {
     overflow: hidden;
 }
 
+/* Colored accent at top */
 .gallery-folder-card::before {
     content: "";
     position: absolute;
@@ -468,6 +455,7 @@ input[type="submit"]:hover {
     background: #1f4ed8;
 }
 
+/* Folder title */
 .gallery-folder-card h2 {
     margin-top: 6px;
     margin-bottom: 12px;
@@ -475,12 +463,14 @@ input[type="submit"]:hover {
     font-size: 21px;
 }
 
+/* Folder description */
 .gallery-folder-card p {
     color: #444;
     line-height: 1.6;
     margin-bottom: 18px;
 }
 
+/* Open folder link */
 .gallery-folder-card span {
     display: inline-block;
     font-weight: 700;
@@ -490,6 +480,7 @@ input[type="submit"]:hover {
     background: #edf2ff;
 }
 
+/* Hover */
 .gallery-folder-card:hover {
     transform: translateY(-5px);
     border-color: #1f4ed8;
@@ -502,6 +493,7 @@ input[type="submit"]:hover {
     color: white;
 }
 
+/* Main Gallery introduction */
 .content > h1 {
     font-size: 32px;
     margin-bottom: 8px;
@@ -516,18 +508,31 @@ input[type="submit"]:hover {
     margin-top: 30px;
 }
 
+/* Mobile */
+@media (max-width: 800px) {
+
+    .gallery-folder-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .gallery-folder-card {
+        padding: 20px;
+    }
+
+}
 /* ==========================================================
    HOMEPAGE
    ========================================================== */
 
 .home-hero {
-    padding: 28px 220px 28px 30px;
+    padding: 28px 30px;
     margin-bottom: 28px;
     border: 1px solid #d7e0f5;
     border-top: 6px solid #1f4ed8;
     border-radius: 12px;
     background: linear-gradient(180deg, #ffffff 0%, #f5f8ff 100%);
-    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.07);
+    box-shadow: 0 5px 16px rgba(0,0,0,0.07);
 }
 
 .home-hero h1 {
@@ -552,7 +557,7 @@ input[type="submit"]:hover {
     border: 1px solid #dfe5f2;
     border-radius: 10px;
     background: #ffffff;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 3px 12px rgba(0,0,0,0.05);
 }
 
 .home-card h2 {
@@ -585,18 +590,44 @@ input[type="submit"]:hover {
     color: #1f4ed8;
 }
 
+.profile-links {
+    margin-top: 16px;
+}
+
+.badge {
+    width: auto;
+    min-width: 34px;
+    padding: 0 8px;
+    border-radius: 18px;
+}
+
+@media (max-width: 800px) {
+
+    .home-hero {
+        padding: 22px;
+    }
+
+    .home-hero h1 {
+        font-size: 28px;
+    }
+
+    .home-card {
+        padding: 18px;
+    }
+
+}
 /* ==========================================================
    PUBLICATIONS PAGE
    ========================================================== */
 
 .publications-hero {
-    padding: 25px 220px 25px 28px;
+    padding: 25px 28px;
     margin-bottom: 20px;
     border: 1px solid #d7e0f5;
     border-top: 6px solid #1f4ed8;
     border-radius: 12px;
     background: linear-gradient(180deg, #ffffff 0%, #f5f8ff 100%);
-    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 5px 16px rgba(0,0,0,0.06);
 }
 
 .publications-hero h1 {
@@ -642,7 +673,7 @@ input[type="submit"]:hover {
     border-left: 5px solid #1f4ed8;
     border-radius: 8px;
     background: #fff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 2px 8px rgba(0,0,0,.04);
 }
 
 .paper-entry h3 {
@@ -670,18 +701,31 @@ input[type="submit"]:hover {
     background: #fafafa;
 }
 
+@media (max-width: 800px) {
+    .publications-hero {
+        padding: 20px;
+    }
+
+    .paper-entry {
+        padding: 14px;
+    }
+
+    .paper-entry h3 {
+        font-size: 16px;
+    }
+}
 /* ==========================================================
    TEACHING PAGE
    ========================================================== */
 
 .teaching-hero {
-    padding: 26px 220px 26px 28px;
+    padding: 26px 28px;
     margin-bottom: 28px;
     border: 1px solid #d7e0f5;
     border-top: 6px solid #1f4ed8;
     border-radius: 12px;
     background: linear-gradient(180deg, #ffffff 0%, #f5f8ff 100%);
-    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 5px 16px rgba(0,0,0,0.06);
 }
 
 .teaching-hero h1 {
@@ -719,7 +763,7 @@ input[type="submit"]:hover {
     background: #f8faff;
     font-weight: 600;
     color: #23458f;
-    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 2px 7px rgba(0,0,0,0.04);
 }
 
 .teaching-card-grid {
@@ -734,13 +778,13 @@ input[type="submit"]:hover {
     border: 1px solid #dce3ef;
     border-radius: 11px;
     background: #ffffff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform .2s ease, box-shadow .2s ease;
 }
 
 .teaching-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 9px 20px rgba(0, 0, 0, 0.09);
+    box-shadow: 0 9px 20px rgba(0,0,0,0.09);
 }
 
 .teaching-card-head {
@@ -798,7 +842,7 @@ input[type="submit"]:hover {
     border: 1px solid #dce3ef;
     border-radius: 11px;
     background: linear-gradient(180deg, #ffffff 0%, #fafcff 100%);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
 .teaching-service-item {
@@ -815,167 +859,87 @@ input[type="submit"]:hover {
     color: #1f4ed8;
 }
 
-/* ==========================================================
-   TEACHING FEEDBACK / COURSE EVALUATIONS
-   ========================================================== */
-
-.feedback-intro {
-    margin: 16px 0 20px 0;
-    padding: 15px 18px;
-    border-left: 5px solid #1f4ed8;
-    border-radius: 7px;
-    background: #f5f8ff;
-    color: #444;
-}
-
-.feedback-summary-grid,
-.feedback-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.feedback-card {
-    margin: 0;
-    padding: 14px;
-    border: 1px solid #dce3ef;
-    border-radius: 10px;
-    background: #ffffff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    text-align: center;
-}
-
-.feedback-card figcaption {
-    margin-bottom: 12px;
-    color: #1f4ed8;
-    line-height: 1.45;
-}
-
-.feedback-card img {
-    width: 100%;
-    height: auto;
-    max-height: 520px;
-    object-fit: contain;
-    border: 1px solid #e2e2e2;
-    background: #fff;
-    transition: transform 0.2s ease;
-}
-
-.feedback-card img:hover {
-    transform: scale(1.01);
-}
-
-.feedback-subtitle {
-    margin-top: 28px;
-    color: #173b8f;
-}
-
-.feedback-note {
-    margin-top: 18px;
-    padding: 12px 15px;
-    border-radius: 7px;
-    background: #fafafa;
-    color: #555;
-    font-size: 13px;
-}
-
-/* =========================
-   SMALL SCREENS / MOBILE
-   ========================= */
-
 @media (max-width: 800px) {
 
-    .container {
-        flex-direction: column;
-    }
-
-    .sidebar {
-        width: 100%;
-        flex: 0 0 auto;
-        border-right: none;
-        border-bottom: 3px solid #1f4ed8;
-    }
-
-    .content {
+    .teaching-hero {
         padding: 20px;
     }
 
-    body::after {
-        top: 108px;
-        right: 12px;
-        width: 88px;
-        height: 88px;
-    }
-
-    .home-hero,
-    .publications-hero,
-    .teaching-hero {
-        padding-right: 112px;
-    }
-
-    .standalone-gallery {
-        padding-right: 112px;
-    }
-
-    .home-hero {
-        padding-top: 22px;
-        padding-bottom: 22px;
-        padding-left: 22px;
-    }
-
-    .home-hero h1 {
-        font-size: 28px;
-    }
-
-    .home-card {
-        padding: 18px;
-    }
-
-    .publications-hero {
-        padding-top: 20px;
-        padding-bottom: 20px;
-        padding-left: 20px;
-    }
-
-    .paper-entry {
-        padding: 14px;
-    }
-
-    .paper-entry h3 {
-        font-size: 16px;
-    }
-
-    .teaching-hero {
-        padding-top: 20px;
-        padding-bottom: 20px;
-        padding-left: 20px;
-    }
-
-    .teaching-card-grid,
-    .teaching-topic-grid,
-    .feedback-summary-grid,
-    .feedback-gallery,
-    .gallery-folder-grid,
-    .video-grid {
+    .teaching-card-grid {
         grid-template-columns: 1fr;
     }
 
-    .gallery-folder-grid {
-        gap: 18px;
+    .teaching-topic-grid {
+        grid-template-columns: 1fr;
     }
 
-    .gallery-folder-card {
-        padding: 20px;
-    }
+}
+/* ==========================================================
+   LAB LOGO - GLOBAL SITE BRANDING
+   Appears automatically on every page that loads style.css
+   ========================================================== */
 
-    .publication-item img {
-        height: auto;
-        max-height: 420px;
-    }
+body::after {
+    content: "";
+    position: fixed;
+    left: 14px;
+    bottom: 14px;
 
-    .video-card video,
-    .feedback-card img {
-        max-height: none;
+    width: 115px;
+    height: 82px;
+
+    background-image: url("/LOG%20MY%20LAB.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    padding: 5px;
+    border: 1px solid rgba(31, 78, 216, 0.28);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.92);
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.10);
+
+    z-index: 900;
+    pointer-events: none;
+}
+
+/* On pages with the left sidebar, keep the logo visually aligned
+   with the sidebar branding area. */
+@media (min-width: 801px) {
+    body::after {
+        left: 55px;
     }
+}
+
+/* Smaller logo on phones/tablets */
+@media (max-width: 800px) {
+    body::after {
+        width: 72px;
+        height: 54px;
+        left: 8px;
+        bottom: 8px;
+        opacity: 0.92;
+    }
+}
+/* ==========================================================
+   LAB LOGO
+   ========================================================== */
+
+.lab-logo-box {
+    text-align: center;
+    margin: 0 0 22px 0;
+    padding: 8px;
+    border: 1px solid #d7e0f5;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+}
+
+.lab-logo {
+    display: block;
+    width: 100%;
+    max-width: 160px;
+    height: auto;
+    margin: 0 auto;
 }
