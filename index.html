@@ -4,33 +4,688 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow, noarchive">
+
 <title>PhD Activities 2016–2020 – Dr. M. Mustafa Azeem</title>
+
 <link rel="stylesheet" href="../../style.css">
+
 <style>
-.standalone-gallery{max-width:1500px;margin:0 auto;padding:28px 24px 50px}
-.phd-gallery-hero{padding:22px 26px;margin:14px 0 24px;background:linear-gradient(180deg,#fff 0%,#faf5ff 100%);border-top:6px solid #7e22ce;border-right:6px solid #7e22ce;border-left:1px solid #e9d5ff;border-bottom:1px solid #e9d5ff;border-radius:11px;box-shadow:0 4px 12px rgba(0,0,0,.05)}
-.phd-gallery-hero h1{margin:0 0 8px;color:#7e22ce}
-.phd-gallery-note{margin:0 0 24px;padding:12px 15px;border-left:5px solid #7e22ce;background:#faf5ff;color:#444;border-radius:6px}
-.phd-photo-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
-.phd-photo-card{margin:0;padding:10px;border:1px solid #e1d8ee;border-top:4px solid #7e22ce;border-radius:10px;background:#fff;box-shadow:0 4px 12px rgba(0,0,0,.06)}
-.phd-photo-card img{display:block;width:100%;height:190px;object-fit:contain;background:#fafafa;border:1px solid #ececec;cursor:zoom-in;transition:.18s}
-.phd-photo-card img:hover{transform:scale(1.025);box-shadow:0 6px 16px rgba(0,0,0,.13)}
-.phd-photo-card figcaption{padding:9px 3px 2px;font-size:12px;line-height:1.45;color:#555}
-.phd-photo-card figcaption span{color:#7e22ce;font-weight:700}
-@media(max-width:1200px){.phd-photo-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media(max-width:900px){.phd-photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:600px){.phd-photo-grid{grid-template-columns:1fr}.phd-photo-card img{height:220px}}
+
+/* =========================================================
+   PHD ACTIVITIES GALLERY
+   ========================================================= */
+
+.standalone-gallery{
+    max-width:1500px;
+    margin:0 auto;
+    padding:28px 24px 50px;
+}
+
+
+/* TOP HEADER */
+
+.phd-gallery-hero{
+    padding:22px 26px;
+    margin:14px 0 24px;
+
+    background:linear-gradient(
+        180deg,
+        #ffffff 0%,
+        #faf5ff 100%
+    );
+
+    border-top:6px solid #7e22ce;
+    border-right:6px solid #7e22ce;
+    border-left:1px solid #e9d5ff;
+    border-bottom:1px solid #e9d5ff;
+
+    border-radius:11px;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.05);
+}
+
+.phd-gallery-hero h1{
+    margin:0 0 8px;
+    color:#7e22ce;
+}
+
+
+/* INFORMATION BOX */
+
+.phd-gallery-note{
+    margin:0 0 24px;
+    padding:12px 15px;
+
+    border-left:5px solid #7e22ce;
+
+    background:#faf5ff;
+    color:#444;
+
+    border-radius:6px;
+}
+
+
+/* PHOTO GRID */
+
+.phd-photo-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,minmax(0,1fr));
+
+    gap:18px;
+
+    align-items:stretch;
+}
+
+
+/* PHOTO CARD */
+
+.phd-photo-card{
+    margin:0;
+    padding:10px;
+
+    border:1px solid #e1d8ee;
+    border-top:4px solid #7e22ce;
+
+    border-radius:10px;
+
+    background:#ffffff;
+
+    box-shadow:
+        0 4px 12px rgba(0,0,0,.06);
+}
+
+
+.phd-photo-card a{
+    display:block;
+}
+
+
+/* MEDIUM IMAGE SIZE */
+
+.phd-photo-card img{
+
+    display:block;
+
+    width:100%;
+
+    height:185px;
+    max-height:185px;
+
+    object-fit:contain;
+    object-position:center;
+
+    background:#fafafa;
+
+    border:1px solid #ececec;
+
+    cursor:zoom-in;
+
+    transition:
+        transform .18s ease,
+        box-shadow .18s ease;
+}
+
+
+/* HOVER */
+
+.phd-photo-card img:hover{
+
+    transform:scale(1.025);
+
+    box-shadow:
+        0 6px 16px rgba(0,0,0,.13);
+}
+
+
+/* CAPTION */
+
+.phd-photo-card figcaption{
+
+    padding:9px 3px 2px;
+
+    font-size:12px;
+
+    line-height:1.45;
+
+    color:#555;
+}
+
+
+.phd-photo-card figcaption span{
+
+    color:#7e22ce;
+
+    font-weight:700;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:1200px){
+
+    .phd-photo-grid{
+
+        grid-template-columns:
+            repeat(3,minmax(0,1fr));
+    }
+}
+
+
+@media(max-width:900px){
+
+    .phd-photo-grid{
+
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+    }
+}
+
+
+@media(max-width:600px){
+
+    .phd-photo-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .phd-photo-card img{
+
+        height:220px;
+        max-height:220px;
+    }
+}
+
 </style>
 </head>
+
+
 <body>
+
 <div class="content standalone-gallery">
-<p><a href="../../gallery.html">← Back to Research Gallery</a></p>
+
+
+<!-- BACK BUTTON -->
+
+<p>
+<a href="../../gallery.html">
+← Back to Research Gallery
+</a>
+</p>
+
+
+
+<!-- ======================================================
+     PAGE HEADER
+     ====================================================== -->
+
 <section class="phd-gallery-hero">
+
 <h1>PhD Activities, 2016–2020</h1>
-<p>Selected photographs from doctoral research activities, academic visits, lectures, technical discussions, conferences, meetings, and professional activities during the PhD period at Harbin Engineering University.</p>
+
+<p>
+Selected photographs from doctoral research activities,
+academic visits, lectures, technical discussions,
+conferences, meetings, and professional activities
+during the PhD period at Harbin Engineering University.
+</p>
+
 </section>
-<div class="phd-gallery-note"><strong>Photo gallery:</strong> Medium-size previews are shown below. Click any photograph to open the original image at full size.</div>
-<div class="phd-photo-grid"><figure class="phd-photo-card"><a href="../../images/phd-activities/CNST%20LECTURE%202.jpg" target="_blank" rel="noopener"><img src="../../images/phd-activities/CNST%20LECTURE%202.jpg" alt="PhD activity photograph" loading="lazy"></a><figcaption>College of Nuclear Science & Technology lecture / academic activity.<br><span>Click image to view full size</span></figcaption></figure><figure class="phd-photo-card"><a href="../../images/phd-activities/CNST%20LECTURE.jpg" target="_blank" rel="noopener"><img src="../../images/phd-activities/CNST%20LECTURE.jpg" alt="PhD activity photograph" loading="lazy"></a><figcaption>College of Nuclear Science & Technology lecture / academic activity.<br><span>Click image to view full size</span></figcaption></figure><figure class="phd-photo-card"><a href="../../images/phd-activities/CNST%20LECTURE_3.jpg" target="_blank" rel="noopener"><img src="../../images/phd-activities/CNST%20LECTURE_3.jpg" alt="PhD activity photograph" loading="lazy"></a><figcaption>College of Nuclear Science & Technology lecture / academic activity.<br><span>Click image to view full size</span></figcaption></figure><figure class="phd-photo-card"><a href="../../images/phd-activities/DALIAN%20VISIT%20HEU.jpg" target="_blank" rel="noopener"><img src="../../images/phd-activities/DALIAN%20VISIT%20HEU.jpg" alt="PhD activity photograph" loading="lazy"></a><figcaption>PhD-period academic visit / professional activity in Dalian.<br><span>Click image to view full size</span></figcaption></figure><figure class="phd-photo-card"><a href="../../images/phd-activities/HEU%20ACTIVITIES%202.jpg" target="_blank" rel="noopener"><img src="../../images/phd-activities/HEU%20ACTIVITIES%202.jpg" alt="PhD activity photograph" loading="lazy"></a><figcaption>Harbin Engineering University PhD-period academic and research activity.<br><span>Click image to view full size</span></figcaption></figure><figure class="phd-photo-card"><a href="../../images/phd-activities/HEU%20ACTIVITIES%20BEIJING%20VISIT.jpg" target="_blank" rel="noopener"><img src="../../images/phd-activities/HEU%20ACTIVITIES%20BEIJING%20VISIT.jpg" alt="PhD activity photograph" loading="lazy"></a><figcaption>PhD-period academic visit / professional activity in Beijing.<br><span>Click image to view full size</span></figcaption></figure><figure class="phd-photo-card"><a href="../../images/phd-activities/HEU%20ACTIVITOES%203.jpg" target="_blank" rel="noopener"><img src="../../images/phd-activities/HEU%20ACTIVITOES%203.jpg" alt="PhD activity photograph" loading="lazy"></a><figcaption>Harbin Engineering University PhD-period academic and research activity.<br><span>Click image to view full size</span></figcaption></figure><figure class="phd-photo-card"><a href="../../images/phd-activities/HEU%20ACTIVITY.jpg" target="_blank" rel="noopener"><img src="../../images/phd-activities/HEU%20ACTIVITY.jpg" alt="PhD activity photograph" loading="lazy"></a><figcaption>Harbin Engineering University PhD-period academic and research activity.<br><span>Click image to view full size</span></figcaption></figure><figure class="phd-photo-card"><a href="../../images/phd-activities/HEU%20ACTIVITY_DALIAN.jpg" target="_blank" rel="noopener"><img src="../../images/phd-activities/HEU%20ACTIVITY_DALIAN.jpg" alt="PhD activity photograph" loading="lazy"></a><figcaption>PhD-period academic visit / professional activity in Dalian.<br><span>Click image to view full size</span></figcaption></figure><figure class="phd-photo-card"><a href="../../images/phd-activities/HEU%20ACTIVITY_DALIAN_2.jpg" target="_blank" rel="noopener"><img src="../../images/phd-activities/HEU%20ACTIVITY_DALIAN_2.jpg" alt="PhD activity photograph" loading="lazy"></a><figcaption>PhD-period academic visit / professional activity in Dalian.<br><span>Click image to view full size</span></figcaption></figure><figure class="phd-photo-card"><a href="../../images/phd-activities/HEU%20BEIJING%20VISIT%204.jpg" target="_blank" rel="noopener"><img src="../../images/phd-activities/HEU%20BEIJING%20VISIT%204.jpg" alt="PhD activity photograph" loading="lazy"></a><figcaption>PhD-period academic visit / professional activity in Beijing.<br><span>Click image to view full size</span></figcaption></figure><figure class="phd-photo-card"><a href="../../images/phd-activities/HEU%20DALIAN%20VISIT%203.jpg" target="_blank" rel="noopener"><img src="../../images/phd-activities/HEU%20DALIAN%20VISIT%203.jpg" alt="PhD activity photograph" loading="lazy"></a><figcaption>PhD-period academic visit / professional activity in Dalian.<br><span>Click image to view full size</span></figcaption></figure><figure class="phd-photo-card"><a href="../../images/phd-activities/HEU%20DALIAN%20VISIT.jpg" target="_blank" rel="noopener"><img src="../../images/phd-activities/HEU%20DALIAN%20VISIT.jpg" alt="PhD activity photograph" loading="lazy"></a><figcaption>PhD-period academic visit / professional activity in Dalian.<br><span>Click image to view full size</span></figcaption></figure><figure class="phd-photo-card"><a href="../../images/phd-activities/Image_2026-09-06_021920_744.jpg" target="_blank" rel="noopener"><img src="../../images/phd-activities/Image_2026-09-06_021920_744.jpg" alt="PhD activity photograph" loading="lazy"></a><figcaption>Selected PhD-period research, academic, conference, or professional activity.<br><span>Click image to view full size</span></figcaption></figure><figure class="phd-photo-card"><a href="../../images/phd-activities/Image_2026-09-06_021956_483.jpg" target="_blank" rel="noopener"><img src="../../images/phd-activities/Image_2026-09-06_021956_483.jpg" alt="PhD activity photograph" loading="lazy"></a><figcaption>Selected PhD-period research, academic, conference, or professional activity.<br><span>Click image to view full size</span></figcaption></figure><figure class="phd-photo-card"><a href="../../images/phd-activities/Image_2026-09-06_022025_113.jpg" target="_blank" rel="noopener"><img src="../../images/phd-activities/Image_2026-09-06_022025_113.jpg" alt="PhD activity photograph" loading="lazy"></a><figcaption>Selected PhD-period research, academic, conference, or professional activity.<br><span>Click image to view full size</span></figcaption></figure><figure class="phd-photo-card"><a href="../../images/phd-activities/Image_2026-09-06_022049_733.jpg" target="_blank" rel="noopener"><img src="../../images/phd-activities/Image_2026-09-06_022049_733.jpg" alt="PhD activity photograph" loading="lazy"></a><figcaption>Selected PhD-period research, academic, conference, or professional activity.<br><span>Click image to view full size</span></figcaption></figure><figure class="phd-photo-card"><a href="../../images/phd-activities/Image_2026-09-06_022109_405.jpg" target="_blank" rel="noopener"><img src="../../images/phd-activities/Image_2026-09-06_022109_405.jpg" alt="PhD activity photograph" loading="lazy"></a><figcaption>Selected PhD-period research, academic, conference, or professional activity.<br><span>Click image to view full size</span></figcaption></figure><figure class="phd-photo-card"><a href="../../images/phd-activities/Image_2026-09-06_022209_756.jpg" target="_blank" rel="noopener"><img src="../../images/phd-activities/Image_2026-09-06_022209_756.jpg" alt="PhD activity photograph" loading="lazy"></a><figcaption>Selected PhD-period research, academic, conference, or professional activity.<br><span>Click image to view full size</span></figcaption></figure><figure class="phd-photo-card"><a href="../../images/phd-activities/Image_2026-09-06_022254_185.jpg" target="_blank" rel="noopener"><img src="../../images/phd-activities/Image_2026-09-06_022254_185.jpg" alt="PhD activity photograph" loading="lazy"></a><figcaption>Selected PhD-period research, academic, conference, or professional activity.<br><span>Click image to view full size</span></figcaption></figure><figure class="phd-photo-card"><a href="../../images/phd-activities/Image_2026-09-06_022301_714.jpg" target="_blank" rel="noopener"><img src="../../images/phd-activities/Image_2026-09-06_022301_714.jpg" alt="PhD activity photograph" loading="lazy"></a><figcaption>Selected PhD-period research, academic, conference, or professional activity.<br><span>Click image to view full size</span></figcaption></figure><figure class="phd-photo-card"><a href="../../images/phd-activities/Image_2026-09-06_022306_006.jpg" target="_blank" rel="noopener"><img src="../../images/phd-activities/Image_2026-09-06_022306_006.jpg" alt="PhD activity photograph" loading="lazy"></a><figcaption>Selected PhD-period research, academic, conference, or professional activity.<br><span>Click image to view full size</span></figcaption></figure><figure class="phd-photo-card"><a href="../../images/phd-activities/Image_2026-09-06_022311_097.jpg" target="_blank" rel="noopener"><img src="../../images/phd-activities/Image_2026-09-06_022311_097.jpg" alt="PhD activity photograph" loading="lazy"></a><figcaption>Selected PhD-period research, academic, conference, or professional activity.<br><span>Click image to view full size</span></figcaption></figure><figure class="phd-photo-card"><a href="../../images/phd-activities/Image_2026-09-06_022317_384.jpg" target="_blank" rel="noopener"><img src="../../images/phd-activities/Image_2026-09-06_022317_384.jpg" alt="PhD activity photograph" loading="lazy"></a><figcaption>Selected PhD-period research, academic, conference, or professional activity.<br><span>Click image to view full size</span></figcaption></figure><figure class="phd-photo-card"><a href="../../images/phd-activities/Image_2026-09-06_022321_508.jpg" target="_blank" rel="noopener"><img src="../../images/phd-activities/Image_2026-09-06_022321_508.jpg" alt="PhD activity photograph" loading="lazy"></a><figcaption>Selected PhD-period research, academic, conference, or professional activity.<br><span>Click image to view full size</span></figcaption></figure><figure class="phd-photo-card"><a href="../../images/phd-activities/Image_2026-09-06_022325_983.jpg" target="_blank" rel="noopener"><img src="../../images/phd-activities/Image_2026-09-06_022325_983.jpg" alt="PhD activity photograph" loading="lazy"></a><figcaption>Selected PhD-period research, academic, conference, or professional activity.<br><span>Click image to view full size</span></figcaption></figure><figure class="phd-photo-card"><a href="../../images/phd-activities/Image_2026-09-06_022332_436.jpg" target="_blank" rel="noopener"><img src="../../images/phd-activities/Image_2026-09-06_022332_436.jpg" alt="PhD activity photograph" loading="lazy"></a><figcaption>Selected PhD-period research, academic, conference, or professional activity.<br><span>Click image to view full size</span></figcaption></figure><figure class="phd-photo-card"><a href="../../images/phd-activities/Image_2026-09-06_022350_476.jpg" target="_blank" rel="noopener"><img src="../../images/phd-activities/Image_2026-09-06_022350_476.jpg" alt="PhD activity photograph" loading="lazy"></a><figcaption>Selected PhD-period research, academic, conference, or professional activity.<br><span>Click image to view full size</span></figcaption></figure><figure class="phd-photo-card"><a href="../../images/phd-activities/Image_2026-09-06_022406_377.jpg" target="_blank" rel="noopener"><img src="../../images/phd-activities/Image_2026-09-06_022406_377.jpg" alt="PhD activity photograph" loading="lazy"></a><figcaption>Selected PhD-period research, academic, conference, or professional activity.<br><span>Click image to view full size</span></figcaption></figure><figure class="phd-photo-card"><a href="../../images/phd-activities/Image_2026-09-06_022414_061.jpg" target="_blank" rel="noopener"><img src="../../images/phd-activities/Image_2026-09-06_022414_061.jpg" alt="PhD activity photograph" loading="lazy"></a><figcaption>Selected PhD-period research, academic, conference, or professional activity.<br><span>Click image to view full size</span></figcaption></figure><figure class="phd-photo-card"><a href="../../images/phd-activities/Image_2026-09-06_022423_029.jpg" target="_blank" rel="noopener"><img src="../../images/phd-activities/Image_2026-09-06_022423_029.jpg" alt="PhD activity photograph" loading="lazy"></a><figcaption>Selected PhD-period research, academic, conference, or professional activity.<br><span>Click image to view full size</span></figcaption></figure><figure class="phd-photo-card"><a href="../../images/phd-activities/Image_2026-09-06_022441_733.jpg" target="_blank" rel="noopener"><img src="../../images/phd-activities/Image_2026-09-06_022441_733.jpg" alt="PhD activity photograph" loading="lazy"></a><figcaption>Selected PhD-period research, academic, conference, or professional activity.<br><span>Click image to view full size</span></figcaption></figure><figure class="phd-photo-card"><a href="../../images/phd-activities/Image_2026-09-06_022454_309.jpg" target="_blank" rel="noopener"><img src="../../images/phd-activities/Image_2026-09-06_022454_309.jpg" alt="PhD activity photograph" loading="lazy"></a><figcaption>Selected PhD-period research, academic, conference, or professional activity.<br><span>Click image to view full size</span></figcaption></figure><figure class="phd-photo-card"><a href="../../images/phd-activities/Image_2026-09-06_022459_897.jpg" target="_blank" rel="noopener"><img src="../../images/phd-activities/Image_2026-09-06_022459_897.jpg" alt="PhD activity photograph" loading="lazy"></a><figcaption>Selected PhD-period research, academic, conference, or professional activity.<br><span>Click image to view full size</span></figcaption></figure><figure class="phd-photo-card"><a href="../../images/phd-activities/Image_2026-09-06_022507_443.jpg" target="_blank" rel="noopener"><img src="../../images/phd-activities/Image_2026-09-06_022507_443.jpg" alt="PhD activity photograph" loading="lazy"></a><figcaption>Selected PhD-period research, academic, conference, or professional activity.<br><span>Click image to view full size</span></figcaption></figure><figure class="phd-photo-card"><a href="../../images/phd-activities/Image_2026-09-06_022513_058.jpg" target="_blank" rel="noopener"><img src="../../images/phd-activities/Image_2026-09-06_022513_058.jpg" alt="PhD activity photograph" loading="lazy"></a><figcaption>Selected PhD-period research, academic, conference, or professional activity.<br><span>Click image to view full size</span></figcaption></figure><figure class="phd-photo-card"><a href="../../images/phd-activities/Image_2026-09-06_022528_290.jpg" target="_blank" rel="noopener"><img src="../../images/phd-activities/Image_2026-09-06_022528_290.jpg" alt="PhD activity photograph" loading="lazy"></a><figcaption>Selected PhD-period research, academic, conference, or professional activity.<br><span>Click image to view full size</span></figcaption></figure><figure class="phd-photo-card"><a href="../../images/phd-activities/Image_2026-09-06_022534_126.jpg" target="_blank" rel="noopener"><img src="../../images/phd-activities/Image_2026-09-06_022534_126.jpg" alt="PhD activity photograph" loading="lazy"></a><figcaption>Selected PhD-period research, academic, conference, or professional activity.<br><span>Click image to view full size</span></figcaption></figure><figure class="phd-photo-card"><a href="../../images/phd-activities/Image_2026-09-06_022539_306.jpg" target="_blank" rel="noopener"><img src="../../images/phd-activities/Image_2026-09-06_022539_306.jpg" alt="PhD activity photograph" loading="lazy"></a><figcaption>Selected PhD-period research, academic, conference, or professional activity.<br><span>Click image to view full size</span></figcaption></figure><figure class="phd-photo-card"><a href="../../images/phd-activities/Image_2026-09-06_022548_505.jpg" target="_blank" rel="noopener"><img src="../../images/phd-activities/Image_2026-09-06_022548_505.jpg" alt="PhD activity photograph" loading="lazy"></a><figcaption>Selected PhD-period research, academic, conference, or professional activity.<br><span>Click image to view full size</span></figcaption></figure><figure class="phd-photo-card"><a href="../../images/phd-activities/image.png" target="_blank" rel="noopener"><img src="../../images/phd-activities/image.png" alt="PhD activity photograph" loading="lazy"></a><figcaption>Selected PhD-period research, academic, conference, or professional activity.<br><span>Click image to view full size</span></figcaption></figure><figure class="phd-photo-card"><a href="../../images/phd-activities/image_4a8f4bf7.png" target="_blank" rel="noopener"><img src="../../images/phd-activities/image_4a8f4bf7.png" alt="PhD activity photograph" loading="lazy"></a><figcaption>Selected PhD-period research, academic, conference, or professional activity.<br><span>Click image to view full size</span></figcaption></figure></div>
+
+
+
+<div class="phd-gallery-note">
+
+<strong>Photo Gallery:</strong>
+
+Selected academic and research activities from the PhD period.
+Click any photograph to open the original image at full size.
+
 </div>
+
+
+
+<!-- ======================================================
+     PHOTO GRID
+     ====================================================== -->
+
+<div class="phd-photo-grid">
+
+
+<!-- CNST LECTURES -->
+
+<figure class="phd-photo-card">
+
+<a href="../../images/phd-activities/CNST%20LECTURE.jpg"
+target="_blank">
+
+<img
+src="../../images/phd-activities/CNST%20LECTURE.jpg"
+alt="College of Nuclear Science and Technology academic activity"
+loading="lazy">
+
+</a>
+
+<figcaption>
+College of Nuclear Science & Technology academic activity.
+<br>
+<span>Click image to view full size</span>
+</figcaption>
+
+</figure>
+
+
+
+<figure class="phd-photo-card">
+
+<a href="../../images/phd-activities/CNST%20LECTURE%202.jpg"
+target="_blank">
+
+<img
+src="../../images/phd-activities/CNST%20LECTURE%202.jpg"
+alt="College of Nuclear Science and Technology lecture"
+loading="lazy">
+
+</a>
+
+<figcaption>
+Academic lecture and PhD-period activity.
+<br>
+<span>Click image to view full size</span>
+</figcaption>
+
+</figure>
+
+
+
+<figure class="phd-photo-card">
+
+<a href="../../images/phd-activities/CNST%20LECTURE_3.jpg"
+target="_blank">
+
+<img
+src="../../images/phd-activities/CNST%20LECTURE_3.jpg"
+alt="College of Nuclear Science and Technology academic activity"
+loading="lazy">
+
+</a>
+
+<figcaption>
+College of Nuclear Science & Technology academic activity.
+<br>
+<span>Click image to view full size</span>
+</figcaption>
+
+</figure>
+
+
+
+<!-- HEU ACTIVITIES -->
+
+<figure class="phd-photo-card">
+
+<a href="../../images/phd-activities/HEU%20ACTIVITY.jpg"
+target="_blank">
+
+<img
+src="../../images/phd-activities/HEU%20ACTIVITY.jpg"
+alt="Harbin Engineering University academic activity"
+loading="lazy">
+
+</a>
+
+<figcaption>
+PhD-period research and academic activity at Harbin Engineering University.
+<br>
+<span>Click image to view full size</span>
+</figcaption>
+
+</figure>
+
+
+
+<figure class="phd-photo-card">
+
+<a href="../../images/phd-activities/HEU%20ACTIVITIES%202.jpg"
+target="_blank">
+
+<img
+src="../../images/phd-activities/HEU%20ACTIVITIES%202.jpg"
+alt="Harbin Engineering University PhD activity"
+loading="lazy">
+
+</a>
+
+<figcaption>
+Selected research and academic activity at HEU.
+<br>
+<span>Click image to view full size</span>
+</figcaption>
+
+</figure>
+
+
+
+<figure class="phd-photo-card">
+
+<a href="../../images/phd-activities/HEU%20ACTIVITOES%203.jpg"
+target="_blank">
+
+<img
+src="../../images/phd-activities/HEU%20ACTIVITOES%203.jpg"
+alt="Harbin Engineering University PhD academic activity"
+loading="lazy">
+
+</a>
+
+<figcaption>
+Doctoral research and professional activity at HEU.
+<br>
+<span>Click image to view full size</span>
+</figcaption>
+
+</figure>
+
+
+
+<!-- DALIAN ACTIVITIES -->
+
+<figure class="phd-photo-card">
+
+<a href="../../images/phd-activities/DALIAN%20VISIT%20HEU.jpg"
+target="_blank">
+
+<img
+src="../../images/phd-activities/DALIAN%20VISIT%20HEU.jpg"
+alt="PhD period academic visit to Dalian"
+loading="lazy">
+
+</a>
+
+<figcaption>
+Academic and professional visit during the PhD period, Dalian.
+<br>
+<span>Click image to view full size</span>
+</figcaption>
+
+</figure>
+
+
+
+<figure class="phd-photo-card">
+
+<a href="../../images/phd-activities/HEU%20DALIAN%20VISIT.jpg"
+target="_blank">
+
+<img
+src="../../images/phd-activities/HEU%20DALIAN%20VISIT.jpg"
+alt="HEU academic visit to Dalian"
+loading="lazy">
+
+</a>
+
+<figcaption>
+HEU academic visit and professional activity in Dalian.
+<br>
+<span>Click image to view full size</span>
+</figcaption>
+
+</figure>
+
+
+
+<figure class="phd-photo-card">
+
+<a href="../../images/phd-activities/HEU%20ACTIVITY_DALIAN.jpg"
+target="_blank">
+
+<img
+src="../../images/phd-activities/HEU%20ACTIVITY_DALIAN.jpg"
+alt="Academic activity in Dalian"
+loading="lazy">
+
+</a>
+
+<figcaption>
+PhD-period academic activity in Dalian.
+<br>
+<span>Click image to view full size</span>
+</figcaption>
+
+</figure>
+
+
+
+<figure class="phd-photo-card">
+
+<a href="../../images/phd-activities/HEU%20ACTIVITY_DALIAN_2.jpg"
+target="_blank">
+
+<img
+src="../../images/phd-activities/HEU%20ACTIVITY_DALIAN_2.jpg"
+alt="HEU academic activity in Dalian"
+loading="lazy">
+
+</a>
+
+<figcaption>
+Academic and research-related activity in Dalian.
+<br>
+<span>Click image to view full size</span>
+</figcaption>
+
+</figure>
+
+
+
+<figure class="phd-photo-card">
+
+<a href="../../images/phd-activities/HEU%20DALIAN%20VISIT%203.jpg"
+target="_blank">
+
+<img
+src="../../images/phd-activities/HEU%20DALIAN%20VISIT%203.jpg"
+alt="PhD academic visit Dalian"
+loading="lazy">
+
+</a>
+
+<figcaption>
+Selected PhD-period academic visit in Dalian.
+<br>
+<span>Click image to view full size</span>
+</figcaption>
+
+</figure>
+
+
+
+<!-- BEIJING ACTIVITIES -->
+
+<figure class="phd-photo-card">
+
+<a href="../../images/phd-activities/HEU%20ACTIVITIES%20BEIJING%20VISIT.jpg"
+target="_blank">
+
+<img
+src="../../images/phd-activities/HEU%20ACTIVITIES%20BEIJING%20VISIT.jpg"
+alt="HEU academic visit Beijing"
+loading="lazy">
+
+</a>
+
+<figcaption>
+Academic and professional activity in Beijing.
+<br>
+<span>Click image to view full size</span>
+</figcaption>
+
+</figure>
+
+
+
+<figure class="phd-photo-card">
+
+<a href="../../images/phd-activities/HEU%20BEIJING%20VISIT%204.jpg"
+target="_blank">
+
+<img
+src="../../images/phd-activities/HEU%20BEIJING%20VISIT%204.jpg"
+alt="HEU Beijing academic visit"
+loading="lazy">
+
+</a>
+
+<figcaption>
+PhD-period academic visit and professional activity in Beijing.
+<br>
+<span>Click image to view full size</span>
+</figcaption>
+
+</figure>
+
+
+
+<!-- OTHER UPLOADED PHD PHOTOS -->
+
+<figure class="phd-photo-card">
+<a href="../../images/phd-activities/Image_2026-09-06_021920_744.jpg" target="_blank">
+<img src="../../images/phd-activities/Image_2026-09-06_021920_744.jpg" alt="PhD activity" loading="lazy">
+</a>
+<figcaption>
+Selected doctoral research and academic activity.
+<br><span>Click image to view full size</span>
+</figcaption>
+</figure>
+
+
+
+<figure class="phd-photo-card">
+<a href="../../images/phd-activities/Image_2026-09-06_021956_483.jpg" target="_blank">
+<img src="../../images/phd-activities/Image_2026-09-06_021956_483.jpg" alt="PhD activity" loading="lazy">
+</a>
+<figcaption>
+Selected doctoral research and professional activity.
+<br><span>Click image to view full size</span>
+</figcaption>
+</figure>
+
+
+
+<figure class="phd-photo-card">
+<a href="../../images/phd-activities/Image_2026-09-06_022025_113.jpg" target="_blank">
+<img src="../../images/phd-activities/Image_2026-09-06_022025_113.jpg" alt="PhD activity" loading="lazy">
+</a>
+<figcaption>
+PhD-period academic and research activity.
+<br><span>Click image to view full size</span>
+</figcaption>
+</figure>
+
+
+
+<figure class="phd-photo-card">
+<a href="../../images/phd-activities/Image_2026-09-06_022049_733.jpg" target="_blank">
+<img src="../../images/phd-activities/Image_2026-09-06_022049_733.jpg" alt="PhD activity" loading="lazy">
+</a>
+<figcaption>
+Selected activity from the doctoral research period.
+<br><span>Click image to view full size</span>
+</figcaption>
+</figure>
+
+
+
+<figure class="phd-photo-card">
+<a href="../../images/phd-activities/Image_2026-09-06_022109_405.jpg" target="_blank">
+<img src="../../images/phd-activities/Image_2026-09-06_022109_405.jpg" alt="PhD activity" loading="lazy">
+</a>
+<figcaption>
+Selected research and professional activity.
+<br><span>Click image to view full size</span>
+</figcaption>
+</figure>
+
+
+
+<figure class="phd-photo-card">
+<a href="../../images/phd-activities/Image_2026-09-06_022209_756.jpg" target="_blank">
+<img src="../../images/phd-activities/Image_2026-09-06_022209_756.jpg" alt="PhD activity" loading="lazy">
+</a>
+<figcaption>
+Selected PhD-period academic activity.
+<br><span>Click image to view full size</span>
+</figcaption>
+</figure>
+
+
+
+<figure class="phd-photo-card">
+<a href="../../images/phd-activities/Image_2026-09-06_022254_185.jpg" target="_blank">
+<img src="../../images/phd-activities/Image_2026-09-06_022254_185.jpg" alt="PhD activity" loading="lazy">
+</a>
+<figcaption>
+Doctoral research and professional activity.
+<br><span>Click image to view full size</span>
+</figcaption>
+</figure>
+
+
+
+<figure class="phd-photo-card">
+<a href="../../images/phd-activities/image.png" target="_blank">
+<img src="../../images/phd-activities/image.png" alt="PhD activity" loading="lazy">
+</a>
+<figcaption>
+Selected activity from the PhD period.
+<br><span>Click image to view full size</span>
+</figcaption>
+</figure>
+
+
+
+<figure class="phd-photo-card">
+<a href="../../images/phd-activities/image_4a8f4bf7.png" target="_blank">
+<img src="../../images/phd-activities/image_4a8f4bf7.png" alt="PhD activity" loading="lazy">
+</a>
+<figcaption>
+Selected academic and research activity.
+<br><span>Click image to view full size</span>
+</figcaption>
+</figure>
+
+
+</div>
+
+
+<!-- ======================================================
+     REMOVE CARDS AUTOMATICALLY IF IMAGE WAS DELETED
+     ====================================================== -->
+
+<script>
+
+document.querySelectorAll(
+    ".phd-photo-card img"
+).forEach(function(img){
+
+    img.onerror = function(){
+
+        const card =
+            this.closest(".phd-photo-card");
+
+        if(card){
+            card.remove();
+        }
+
+    };
+
+});
+
+</script>
+
+
+</div>
+
 </body>
 </html>
