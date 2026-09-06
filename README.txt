@@ -1,20 +1,37 @@
-REVIEWER & EDITORIAL SERVICE PAGE UPDATE
+SITE NAVIGATION REPAIR V2
 
-1. Upload reviewer-service.html to the ROOT of the GitHub Pages repository.
-2. Upload the complete images/reviewer-service/ folder.
-3. Paste all content from REVIEWER_SERVICE_CSS_ADD.txt at the bottom of style.css.
-4. Commit.
-5. Hard refresh with Ctrl+F5.
+This version fixes the sidebar consistently on:
+- biography.html
+- research.html
+- projects.html
+- grants.html
+- code.html
+- references.html
+- gallery.html
+- contact.html
+- services.html
+- misc.html
 
-The confidential Computational and Theoretical Chemistry manuscript
-COMPTC-D-23-01376 is intentionally excluded.
+Every repaired page now contains the SAME navigation order:
+Homepage
+Biography
+Research Interests
+Publications
+Projects
+Teaching
+Grants & Funding
+Code & Tools
+References & Service
+Reviewer & Editorial Service
+Gallery
+Contact
+Services
+Misc
 
-NEW: 2026 DOE Office of Science SCGSR reviewer appreciation screenshot added.
+Each page highlights only itself as active.
 
-NEW CERTIFICATES ADDED:
-- 2024 Progress in Nuclear Energy - 1 review in June 2024
-- 2024 Annals of Nuclear Energy - 1 review in March 2024
-- 2023 Nuclear Instruments and Methods in Physics Research Section A - 2 reviews in March 2023
-- 2023 Computational and Theoretical Chemistry - 1 review in December 2023
-
-The newly uploaded Nuclear Engineering and Design certificate is the same 2023 record already included, so it is not duplicated.
+IMPORTANT:
+- index.html, publications.html, teaching.html, and reviewer-service.html already had Reviewer & Editorial Service in the sidebar and do not need replacement for this issue.
+- grants.html is repaired because its current repository file contains the Research Gallery page.
+- Do not replace style.css.
+- Optional: paste MISC_PAGE_COLOR_CSS_ADD.txt at the bottom of style.css if desired.

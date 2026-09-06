@@ -1,0 +1,11 @@
+/* ==========================================================
+   MISC PAGE ACCENT
+   Paste at the VERY BOTTOM of style.css if Misc should have
+   its own highlighted color.
+   ========================================================== */
+
+body:has(.nav a.active[href="misc.html"]) {
+    --page-accent: #6d28d9;
+    --page-accent-soft: #f5f3ff;
+    --page-accent-line: #ddd6fe;
+}
