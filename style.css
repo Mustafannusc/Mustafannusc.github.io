@@ -898,3 +898,178 @@ input[type="submit"]:hover {
     height: auto;
     margin: 0 auto;
 }
+/* ==========================================================
+   PAGE ACCENT SYSTEM
+   Paste at the VERY BOTTOM of style.css
+   ========================================================== */
+
+body {
+    --page-accent: #1f4ed8;
+    --page-accent-soft: #eef3ff;
+    --page-accent-line: #d7e0f5;
+}
+
+body:has(.nav a.active[href="index.html"]) {
+    --page-accent: #1f4ed8;
+    --page-accent-soft: #eef3ff;
+    --page-accent-line: #d7e0f5;
+}
+
+body:has(.nav a.active[href="biography.html"]) {
+    --page-accent: #7c3aed;
+    --page-accent-soft: #f3e8ff;
+    --page-accent-line: #e4d2ff;
+}
+
+body:has(.nav a.active[href="research.html"]) {
+    --page-accent: #0f766e;
+    --page-accent-soft: #e6fffb;
+    --page-accent-line: #bfeee8;
+}
+
+body:has(.nav a.active[href="publications.html"]) {
+    --page-accent: #b45309;
+    --page-accent-soft: #fff7ed;
+    --page-accent-line: #fed7aa;
+}
+
+body:has(.nav a.active[href="projects.html"]) {
+    --page-accent: #be123c;
+    --page-accent-soft: #fff1f2;
+    --page-accent-line: #fecdd3;
+}
+
+body:has(.nav a.active[href="teaching.html"]) {
+    --page-accent: #0369a1;
+    --page-accent-soft: #f0f9ff;
+    --page-accent-line: #bae6fd;
+}
+
+body:has(.nav a.active[href="grants.html"]) {
+    --page-accent: #a16207;
+    --page-accent-soft: #fefce8;
+    --page-accent-line: #fde68a;
+}
+
+body:has(.nav a.active[href="code.html"]) {
+    --page-accent: #4338ca;
+    --page-accent-soft: #eef2ff;
+    --page-accent-line: #c7d2fe;
+}
+
+body:has(.nav a.active[href="references.html"]) {
+    --page-accent: #475569;
+    --page-accent-soft: #f8fafc;
+    --page-accent-line: #cbd5e1;
+}
+
+body:has(.nav a.active[href="reviewer-service.html"]) {
+    --page-accent: #9f1239;
+    --page-accent-soft: #fff1f2;
+    --page-accent-line: #fecdd3;
+}
+
+body:has(.nav a.active[href="gallery.html"]) {
+    --page-accent: #7e22ce;
+    --page-accent-soft: #faf5ff;
+    --page-accent-line: #e9d5ff;
+}
+
+body:has(.nav a.active[href="contact.html"]) {
+    --page-accent: #047857;
+    --page-accent-soft: #ecfdf5;
+    --page-accent-line: #a7f3d0;
+}
+
+body:has(.nav a.active[href="services.html"]) {
+    --page-accent: #c2410c;
+    --page-accent-soft: #fff7ed;
+    --page-accent-line: #fed7aa;
+}
+
+/* ACTIVE SIDEBAR TAB */
+.nav a.active {
+    background: var(--page-accent-soft) !important;
+    color: var(--page-accent) !important;
+    border-left: 5px solid var(--page-accent) !important;
+    border-right: 5px solid var(--page-accent) !important;
+    border-top: 1px solid var(--page-accent-line);
+    border-bottom: 1px solid var(--page-accent-line);
+    border-radius: 6px;
+    font-weight: 700;
+    box-shadow: 0 2px 7px rgba(0,0,0,0.05);
+}
+
+.nav a:hover {
+    border-left: 3px solid var(--page-accent);
+}
+
+/* TOP PAGE HEADER / HERO */
+.home-hero,
+.publications-hero,
+.teaching-hero,
+.reviewer-hero {
+    border: 1px solid var(--page-accent-line) !important;
+    border-top: 6px solid var(--page-accent) !important;
+    border-right: 6px solid var(--page-accent) !important;
+    background: linear-gradient(180deg, #ffffff 0%, var(--page-accent-soft) 100%) !important;
+}
+
+.content > h1:first-child {
+    margin: 0 0 24px 0;
+    padding: 18px 22px;
+    color: var(--page-accent) !important;
+    background: linear-gradient(180deg, #ffffff 0%, var(--page-accent-soft) 100%);
+    border: 1px solid var(--page-accent-line);
+    border-top: 6px solid var(--page-accent);
+    border-right: 6px solid var(--page-accent);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* INSIDE SECTION HEADINGS */
+.content h2 {
+    color: var(--page-accent);
+}
+
+.content > h2,
+.home-card > h2,
+.teaching-section > h2,
+.review-year > h2,
+.pub-year > h2 {
+    padding: 8px 14px !important;
+    background: linear-gradient(90deg, var(--page-accent-soft) 0%, #ffffff 75%);
+    border-left: 5px solid var(--page-accent) !important;
+    border-right: 5px solid var(--page-accent) !important;
+    border-top: 1px solid var(--page-accent-line) !important;
+    border-bottom: 1px solid var(--page-accent-line) !important;
+    border-radius: 6px;
+}
+
+.pub-year-badge,
+.review-year-badge,
+.teaching-year {
+    background: var(--page-accent) !important;
+}
+
+.paper-entry,
+.teaching-topic,
+.publication-note,
+.reviewer-note,
+.feedback-intro {
+    border-left-color: var(--page-accent) !important;
+}
+
+.paper-entry h3,
+.teaching-card h3,
+.teaching-service-item h3,
+.feedback-subtitle,
+.reviewer-card figcaption strong {
+    color: var(--page-accent) !important;
+}
+
+@media (max-width: 800px) {
+    .content > h1:first-child {
+        padding: 14px 16px;
+    }
+}
