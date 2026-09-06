@@ -1073,3 +1073,79 @@ body:has(.nav a.active[href="services.html"]) {
         padding: 14px 16px;
     }
 }
+/* ==========================================================
+   REVIEWER & EDITORIAL SERVICE — COMPACT CARD + YEAR FIX
+   Paste this block at the VERY BOTTOM of style.css
+   ========================================================== */
+
+body:has(.nav a.active[href="reviewer-service.html"]) .review-year-badge {
+    background: #9f1239 !important;
+    color: #ffffff !important;
+    font-weight: 800 !important;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.25);
+}
+
+body:has(.nav a.active[href="reviewer-service.html"]) .review-year > h2 {
+    color: #9f1239 !important;
+    padding: 7px 12px !important;
+}
+
+body:has(.nav a.active[href="reviewer-service.html"]) .reviewer-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 18px !important;
+    align-items: start !important;
+}
+
+body:has(.nav a.active[href="reviewer-service.html"]) .reviewer-card {
+    padding: 10px !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+}
+
+body:has(.nav a.active[href="reviewer-service.html"]) .reviewer-card img {
+    display: block !important;
+    width: 100% !important;
+    height: 190px !important;
+    max-height: 190px !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    background: #ffffff !important;
+    border: 1px solid #e5e7eb !important;
+    cursor: zoom-in !important;
+}
+
+body:has(.nav a.active[href="reviewer-service.html"]) .reviewer-card img:hover {
+    transform: scale(1.02);
+    transition: transform 0.18s ease;
+}
+
+body:has(.nav a.active[href="reviewer-service.html"]) .reviewer-card figcaption {
+    padding: 9px 3px 2px 3px !important;
+    line-height: 1.35 !important;
+}
+
+body:has(.nav a.active[href="reviewer-service.html"]) .reviewer-card figcaption strong {
+    font-size: 14px !important;
+}
+
+body:has(.nav a.active[href="reviewer-service.html"]) .reviewer-card figcaption span {
+    font-size: 12px !important;
+}
+
+@media (max-width: 1150px) {
+    body:has(.nav a.active[href="reviewer-service.html"]) .reviewer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+}
+
+@media (max-width: 760px) {
+    body:has(.nav a.active[href="reviewer-service.html"]) .reviewer-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    body:has(.nav a.active[href="reviewer-service.html"]) .reviewer-card img {
+        height: 180px !important;
+        max-height: 180px !important;
+    }
+}
