@@ -31,8 +31,9 @@ body {
    ========================= */
 
 .sidebar {
-    width: 240px;
-    padding: 20px 15px;
+    width: 210px;
+    flex: 0 0 210px;
+    padding: 20px 10px;
     border-right: 3px solid #1f4ed8;
     background-color: #ffffff;
 }
@@ -82,7 +83,8 @@ body {
 
 .content {
     flex: 1;
-    padding: 30px 40px;
+    min-width: 0;
+    padding: 30px 28px;
 }
 
 /* =========================
@@ -875,71 +877,24 @@ input[type="submit"]:hover {
 
 }
 /* ==========================================================
-   LAB LOGO - GLOBAL SITE BRANDING
-   Appears automatically on every page that loads style.css
-   ========================================================== */
-
-body::after {
-    content: "";
-    position: fixed;
-    left: 14px;
-    bottom: 14px;
-
-    width: 115px;
-    height: 82px;
-
-    background-image: url("/LOG%20MY%20LAB.gif");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-
-    padding: 5px;
-    border: 1px solid rgba(31, 78, 216, 0.28);
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.92);
-
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.10);
-
-    z-index: 900;
-    pointer-events: none;
-}
-
-/* On pages with the left sidebar, keep the logo visually aligned
-   with the sidebar branding area. */
-@media (min-width: 801px) {
-    body::after {
-        left: 55px;
-    }
-}
-
-/* Smaller logo on phones/tablets */
-@media (max-width: 800px) {
-    body::after {
-        width: 72px;
-        height: 54px;
-        left: 8px;
-        bottom: 8px;
-        opacity: 0.92;
-    }
-}
-/* ==========================================================
    LAB LOGO
    ========================================================== */
 
 .lab-logo-box {
+    display: block;
     text-align: center;
-    margin: 0 0 22px 0;
-    padding: 8px;
-    border: 1px solid #d7e0f5;
-    border-radius: 10px;
-    background: #ffffff;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+    margin: 0 0 12px 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
 }
 
 .lab-logo {
     display: block;
     width: 100%;
-    max-width: 160px;
+    max-width: 205px;
     height: auto;
     margin: 0 auto;
 }
