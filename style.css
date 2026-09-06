@@ -875,54 +875,6 @@ input[type="submit"]:hover {
 
 }
 /* ==========================================================
-   LAB LOGO - GLOBAL SITE BRANDING
-   Appears automatically on every page that loads style.css
-   ========================================================== */
-
-body::after {
-    content: "";
-    position: fixed;
-    left: 14px;
-    bottom: 14px;
-
-    width: 115px;
-    height: 82px;
-
-    background-image: url("/LOG%20MY%20LAB.gif");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-
-    padding: 5px;
-    border: 1px solid rgba(31, 78, 216, 0.28);
-    border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.92);
-
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.10);
-
-    z-index: 900;
-    pointer-events: none;
-}
-
-/* On pages with the left sidebar, keep the logo visually aligned
-   with the sidebar branding area. */
-@media (min-width: 801px) {
-    body::after {
-        left: 55px;
-    }
-}
-
-/* Smaller logo on phones/tablets */
-@media (max-width: 800px) {
-    body::after {
-        width: 72px;
-        height: 54px;
-        left: 8px;
-        bottom: 8px;
-        opacity: 0.92;
-    }
-}
-/* ==========================================================
    LAB LOGO
    ========================================================== */
 
@@ -943,3 +895,66 @@ body::after {
     height: auto;
     margin: 0 auto;
 }
+
+/* ==========================================================
+   LAB LOGO WATERMARK BACKGROUND
+   ========================================================== */
+
+/* Main page background */
+body {
+    position: relative;
+    background-color: #ffffff;
+}
+
+/* Large faint lab watermark */
+body::before {
+    content: "";
+    position: fixed;
+    top: 50%;
+    left: calc(50% + 120px);
+    transform: translate(-50%, -50%);
+
+    width: 520px;
+    height: 520px;
+
+    background-image: url("/LOG%20MY%20LAB.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    opacity: 0.055;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Keep all site content above the watermark */
+.container,
+.site-footer,
+.visitor-counter {
+    position: relative;
+    z-index: 1;
+}
+
+/* Keep the sidebar visually solid */
+.sidebar {
+    position: relative;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.96);
+}
+
+/* Let the watermark remain subtly visible behind main content */
+.content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Mobile */
+@media (max-width: 800px) {
+    body::before {
+        left: 50%;
+        width: 330px;
+        height: 330px;
+        opacity: 0.04;
+    }
+}
+
