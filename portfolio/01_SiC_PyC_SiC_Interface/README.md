@@ -25,37 +25,40 @@ Developed atomistic workflows for planar SiC/PyC/SiC interfaces, structural rela
 - Validation of short-range and interlayer interaction descriptions
 - Traction/debonding and irradiation-ready atomistic workflows
 
+## Image Gallery
+All selected figures are organized in the [`images/`](./images/) folder with descriptive filenames. Visitors can either browse that folder directly or view the same figures with technical explanations below.
+
 ---
 
 ## Selected Results
 
 ### 1. SiC/PyC/SiC model geometry and indentation configuration
-![SiC PyC SiC model geometry](./Screenshot%202026-09-15%20165340.png)
+![SiC PyC SiC model geometry](./images/01_model_geometry_indentation.png)
 
 Representative atomistic configurations of the SiC/PyC/SiC system and spherical indenter. The model illustrates the multilayer PyC region confined between SiC blocks and the loading configuration used to probe local mechanical response.
 
 ### 2. Thermal equilibration and constituent-temperature validation
-![Thermal equilibration validation](./Screenshot%202026-09-15%20165401.png)
+![Thermal equilibration validation](./images/02_thermal_equilibration_validation.png)
 
 Thermal preparation of the SiC/PyC/SiC model showing the staged equilibration protocol and the temperature balance between the PyC and SiC constituents before mechanical loading.
 
 ### 3. Loading-rate dependence of force and interface contact
-![Loading rate contact response](./Screenshot%202026-09-15%20165419.png)
+![Loading rate contact response](./images/03_loading_rate_contact_response.png)
 
 Comparison of indentation response at multiple loading rates. The analysis tracks normal load, normalized right-interface contact fraction, and persistent contact-loss depth to quantify rate-sensitive interface response.
 
 ### 4. Progressive indentation morphology
-![Indentation morphology sequence](./Screenshot%202026-09-15%20165435.png)
+![Indentation morphology sequence](./images/04_indentation_morphology_sequence.png)
 
 Atomic configurations at increasing indentation depth illustrate progressive bending and local distortion of the PyC layers beneath the spherical indenter, including the onset of strongly localized deformation at larger penetration depth.
 
 ### 5. Interatomic-potential validation
-![Interatomic potential validation](./Screenshot%202026-09-15%20165458.png)
+![Interatomic potential validation](./images/05_interatomic_potential_validation.png)
 
 Interaction-energy checks used to validate the force-field treatment. The plots compare short-range interactions and interlayer binding behavior, including PyC/SiC interactions, diamond/PyC separation, carbon interlayer binding, and the Tersoff/ZBL short-range overlay.
 
 ### 6. Layer-resolved SiC/PyC interface contacts
-![Layer resolved interface contacts](./Screenshot%202026-09-15%20165551.png)
+![Layer resolved interface contacts](./images/06_layer_resolved_interface_contacts.png)
 
 Layer-resolved contact maps quantify the absolute and incremental contact population at the left and right SiC/PyC interfaces as indentation progresses. This analysis identifies which PyC layers retain, gain, or lose interfacial contact during deformation.
 
