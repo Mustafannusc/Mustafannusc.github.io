@@ -17,19 +17,19 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Add lab logo to root HTML pages
-        shell: python
+        shell: bash
         run: |
+          python - <<'PY'
           from pathlib import Path
           import re
 
           changed = []
           logo_block = '''
-    <div class="lab-logo-box">
-      <img src="/LOG%20MY%20LAB.gif"
-           alt="Material Innovation Solutions Lab logo"
-           class="lab-logo">
-    </div>
-'''
+          <div class="lab-logo-box">
+            <img src="/LOG%20MY%20LAB.gif"
+                 alt="Material Innovation Solutions Lab logo"
+                 class="lab-logo">
+          </div>'''
 
           for path in Path('.').glob('*.html'):
               text = path.read_text(encoding='utf-8')
@@ -39,12 +39,19 @@ jobs:
                   continue
 
               pattern = r'(<(?:aside|div) class="sidebar">\s*<h2>.*?</h2>)'
-              new_text, n = re.subn(pattern, lambda m: m.group(1) + '\n' + logo_block.rstrip('\n'), text, count=1, flags=re.S)
+              new_text, n = re.subn(
+                  pattern,
+                  lambda m: m.group(1) + '\n' + logo_block,
+                  text,
+                  count=1,
+                  flags=re.S,
+              )
               if n:
                   path.write_text(new_text, encoding='utf-8')
                   changed.append(str(path))
 
           print('Updated:', ', '.join(changed) if changed else 'none')
+          PY
 
       - name: Commit logo updates
         run: |
