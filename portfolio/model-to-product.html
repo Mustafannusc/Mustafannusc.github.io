@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Model-to-Product Development Pathway - Dr. M. Mustafa Azeem</title>
+<link rel="stylesheet" href="../style.css">
+<style>
+.hero{padding:24px 28px;margin-bottom:24px;border:1px solid #d7e0f5;border-top:6px solid #1f4ed8;border-radius:12px;background:linear-gradient(180deg,#fff 0%,#f5f8ff 100%)}
+.hero h1{margin-bottom:8px}.hero p{max-width:1100px}
+.pathway{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;margin:28px 0}
+.step{position:relative;padding:16px 14px;border:1px solid #d7e0f5;border-radius:10px;background:#fff;min-height:210px}
+.step h2{margin:0 0 10px;color:#1f4ed8;font-size:18px}.step .num{display:inline-flex;width:30px;height:30px;border-radius:50%;align-items:center;justify-content:center;background:#1f4ed8;color:#fff;font-weight:700;margin-bottom:8px}.step ul{padding-left:18px}.step:not(:last-child)::after{content:'→';position:absolute;right:-18px;top:85px;font-size:28px;font-weight:700;color:#1f4ed8;z-index:2}
+.translation{margin:30px 0;padding:18px;border-left:5px solid #1f4ed8;background:#f6f8fd}
+.project-map{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px;margin-top:22px}.card{padding:18px;border:1px solid #dfe5f2;border-radius:10px;background:#fff}.card h2{margin-top:0;color:#1f4ed8}.deliverable{padding:9px 11px;margin-top:10px;background:#f7f9ff;border-left:4px solid #1f4ed8}.gate{font-weight:700;color:#1f4ed8}
+@media(max-width:1100px){.pathway{grid-template-columns:repeat(3,1fr)}.step:not(:last-child)::after{display:none}}@media(max-width:700px){.pathway{grid-template-columns:1fr}.project-map{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="container">
+<aside class="sidebar">
+<h2>Dr. M. Mustafa Azeem</h2>
+<div class="lab-logo-box"><img src="../LOG%20MY%20LAB.gif" alt="Research Lab Logo" class="lab-logo"></div>
+<ul class="nav">
+<li><a href="../index.html">Homepage</a></li>
+<li><a href="../biography.html">Biography</a></li>
+<li><a href="../research.html">Research Interests</a></li>
+<li><a href="../publications.html">Publications</a></li>
+<li><a href="../projects.html">Projects</a></li>
+<li><a href="index.html">Research Portfolio</a></li>
+<li><a href="real-world-impact.html">Engineering & Industry Impact</a></li>
+<li><a class="active" href="model-to-product.html">Model to Product</a></li>
+<li><a href="../teaching.html">Teaching</a></li>
+<li><a href="../grants.html">Grants & Funding</a></li>
+<li><a href="../code.html">Code & Tools</a></li>
+<li><a href="../gallery.html">Gallery</a></li>
+<li><a href="../contact.html">Contact</a></li>
+</ul>
+</aside>
+<main class="content">
+<section class="hero">
+<h1>From Modeling Prediction to Industrial Product</h1>
+<p><b>The goal is not to stop at simulation.</b> The computational work defines mechanisms, narrows the design space, identifies measurable targets, and guides the next experiment. The same information can then support proof-of-concept prototypes, scale-up studies, qualification testing, and ultimately component or process decisions.</p>
+</section>
+
+<div class="translation"><b>Engineering development chain:</b> atomic-scale physics → predictive model → targeted experiment → prototype / proof of concept → larger-scale validation → qualification and industrial deployment.</div>
+
+<section class="pathway" aria-label="Model to industrial product development pathway">
+<article class="step"><div class="num">1</div><h2>Physics-Based Modeling</h2><ul><li>MD / DFT / CALPHAD</li><li>Defects, interfaces, diffusion</li><li>Mechanical and thermal mechanisms</li><li>Irradiation or laser-process response</li></ul><p class="gate">Output: mechanistic descriptors</p></article>
+<article class="step"><div class="num">2</div><h2>Prediction & ML</h2><ul><li>Property prediction</li><li>Surrogate models</li><li>Design-space screening</li><li>Uncertainty / sensitivity</li></ul><p class="gate">Output: ranked conditions & candidates</p></article>
+<article class="step"><div class="num">3</div><h2>Targeted Experiments</h2><ul><li>Choose composition/process windows</li><li>Mechanical testing</li><li>Microscopy / phase analysis</li><li>Irradiation or thermal exposure</li></ul><p class="gate">Output: validation data</p></article>
+<article class="step"><div class="num">4</div><h2>Prototype / Proof of Concept</h2><ul><li>Small coupon or demonstrator</li><li>AM build or joined interface</li><li>Functional testing</li><li>Compare model ↔ experiment</li></ul><p class="gate">Output: demonstrated feasibility</p></article>
+<article class="step"><div class="num">5</div><h2>Scale-Up Design</h2><ul><li>Larger geometry</li><li>Process repeatability</li><li>Component-level FEM / multiphysics</li><li>Manufacturing constraints</li></ul><p class="gate">Output: scale-up process & component design</p></article>
+<article class="step"><div class="num">6</div><h2>Qualification & Product</h2><ul><li>Standards and acceptance criteria</li><li>Lifetime / reliability assessment</li><li>Cost and manufacturability</li><li>Industry deployment</li></ul><p class="gate">Output: qualified material/process/product</p></article>
+</section>
+
+<h2>How My Portfolio Fits This Pathway</h2>
+<section class="project-map">
+<article class="card"><h2>SiC/PyC/SiC Interfaces</h2><p><b>Model:</b> adhesion, debonding, irradiation defects and contact evolution.</p><p><b>Next experiment:</b> interface-strength testing, microscopy of irradiated interfaces, thermal-mechanical cycling.</p><div class="deliverable"><b>Prototype direction:</b> optimized SiC-based composite interface architecture for cladding or high-temperature CMC applications.</div></article>
+<article class="card"><h2>ODS Steels</h2><p><b>Model:</b> defect sinks, cascade damage, dislocation-oxide interactions and strengthening mechanisms.</p><p><b>Next experiment:</b> ion/neutron irradiation, nanoindentation, TEM defect characterization, tensile/creep testing.</p><div class="deliverable"><b>Prototype direction:</b> candidate ODS microstructures with optimized oxide dispersion for radiation-tolerant structural components.</div></article>
+<article class="card"><h2>HEA / RMPEA</h2><p><b>Model:</b> composition-property relationships, local structure and high-temperature deformation trends.</p><p><b>Next experiment:</b> alloy synthesis, XRD/SEM, oxidation, tensile/compression and creep testing.</p><div class="deliverable"><b>Prototype direction:</b> down-selected extreme-environment alloy compositions for aerospace, nuclear and power applications.</div></article>
+<article class="card"><h2>800H/Ni + ML</h2><p><b>Model:</b> irradiation defects, diffusion, interface mixing, void evolution and mechanical response.</p><p><b>Next experiment:</b> diffusion couples, interface tensile/shear testing, irradiation and microscopy.</p><div class="deliverable"><b>Prototype direction:</b> optimized dissimilar-material interface or joining strategy for high-temperature systems.</div></article>
+<article class="card"><h2>NiTi LPBF</h2><p><b>Model:</b> laser heating, melting, neck growth, mixing and process descriptors.</p><p><b>Next experiment:</b> parameter-matrix LPBF builds, density/porosity analysis, DSC/XRD, tensile and shape-memory testing.</p><div class="deliverable"><b>Prototype direction:</b> validated LPBF process window for functional NiTi components and subsequent component-scale builds.</div></article>
+</section>
+
+<h2>What Makes the Computational Stage Valuable</h2>
+<p>Experiments become much more expensive as the project moves toward larger samples, irradiation campaigns, advanced microscopy, prototype fabrication and qualification. The computational stage is therefore used as an <b>engineering filter</b>: it identifies the mechanisms that matter, removes poor candidates early, defines measurable hypotheses, and concentrates experimental resources on the most informative compositions, interfaces and processing conditions.</p>
+<p>This creates a closed design loop: <b>model → predict → test → update → prototype → scale → qualify.</b> The final objective is a material, process window, interface architecture or component design that can be manufactured and validated at engineering scale.</p>
+
+<p><a href="real-world-impact.html">← Engineering & Industry Impact</a> &nbsp; | &nbsp; <a href="index.html">Research Portfolio</a></p>
+</main>
+</div>
+<footer class="site-footer"><hr><p>© 2026 Mustafa Azeem. All rights reserved.</p></footer>
+</body>
+</html>
