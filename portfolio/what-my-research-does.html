@@ -9,9 +9,8 @@
 <style>
 .hero{padding:26px 28px;margin-bottom:24px;border:1px solid #d7e0f5;border-top:6px solid #1f4ed8;border-radius:12px;background:linear-gradient(180deg,#fff 0%,#f5f8ff 100%)}
 .hero h1{margin-bottom:8px}.hero p{max-width:1100px}.big-line{font-size:1.12em;font-weight:700;color:#1f4ed8}
-.pathway{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px;align-items:stretch;margin:28px 0}.step{padding:14px 10px;border:1px solid #d7e0f5;border-radius:9px;background:#f9fbff;text-align:center;font-weight:700}.step span{display:block;margin-top:6px;font-weight:400;font-size:.9em;color:#555}.arrow{display:flex;align-items:center;justify-content:center;font-size:24px;color:#1f4ed8}
+.research-graphic{margin:28px 0 32px;padding:14px;border:1px solid #dfe5f2;border-radius:12px;background:#fff;text-align:center}.research-graphic img{display:block;width:100%;height:auto;border-radius:8px}.research-graphic figcaption{margin-top:10px;font-size:.92em;color:#555}
 .problem-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px;margin-top:24px}.problem{padding:18px;border:1px solid #dfe5f2;border-radius:10px;background:#fff}.problem h2{margin-top:0;color:#1f4ed8}.decision{margin-top:10px;padding:10px 12px;border-left:4px solid #1f4ed8;background:#f7f9ff}.links{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin:30px 0}.link-card{display:block;padding:18px;border:2px solid #1f4ed8;border-radius:10px;background:#f7f9ff;text-decoration:none;color:inherit}.link-card h2{margin-top:0;color:#1f4ed8}.link-card:hover{background:#eef3ff}.note{font-size:.92em;color:#555}.outcome{padding:18px;margin:28px 0;border:1px solid #d7e0f5;border-radius:10px;background:#fff}.outcome b{color:#1f4ed8}
-@media(max-width:900px){.pathway{grid-template-columns:1fr}.arrow{transform:rotate(90deg)}}
 </style>
 </head>
 <body>
@@ -43,23 +42,10 @@
 <p>The goal is not simply to visualize atoms. The goal is to identify the mechanisms that control failure or performance, convert them into measurable engineering metrics, and use those predictions to guide material selection, alloy design, interface design, manufacturing conditions, experiments, prototypes, and eventual qualification.</p>
 </section>
 
-<h2>From Atomic-Scale Physics to an Industrial Decision</h2>
-<div class="pathway">
-<div class="step">1. Real Problem<span>radiation, heat, stress, corrosion, laser processing</span></div>
-<div class="arrow">→</div>
-<div class="step">2. Atomic Mechanism<span>defects, diffusion, interfaces, dislocations, melting, phase change</span></div>
-<div class="arrow">→</div>
-<div class="step">3. Predicted Metric<span>strength, adhesion, defect density, stability, mixing, process window</span></div>
-<div class="arrow">→</div>
-<div class="step">4. Engineering Decision<span>which material, composition, interface, or process condition to test next</span></div>
-</div>
-<div class="pathway">
-<div class="step">5. Targeted Experiment<span>mechanical, thermal, irradiation, microscopy, AM process test</span></div>
-<div class="arrow">→</div>
-<div class="step">6. Prototype / Proof of Concept<span>component coupon, joint, coating, printed feature, material batch</span></div>
-<div class="arrow">→</div>
-<div class="step">7. Scale-Up & Qualification<span>larger-scale tests, standards, reliability, lifetime and deployment</span></div>
-</div>
+<figure class="research-graphic">
+<img src="https://chatgpt.com/backend-api/estuary/content?id=file_00000000e25881f59f531cba4394a53b&amp;ts=497090&amp;p=fs&amp;cid=1&amp;sig=722527499d1cf05e6c013a7ccec6c8508a2eacff943dbfc61c8c9d494310c0eb&amp;v=0" alt="From atomic-scale modeling to real-world materials and industrial deployment infographic">
+<figcaption>From atomic-scale modeling and machine-learning prediction to targeted experiments, prototype proof-of-concept, scale-up, qualification, and industrial deployment.</figcaption>
+</figure>
 
 <div class="outcome"><b>Engineering value:</b> reduce trial-and-error, reduce expensive experiments, identify failure mechanisms earlier, rank candidate materials and processing conditions, and focus validation effort where it has the highest value.</div>
 
