@@ -7,7 +7,11 @@
 <title>800H/Ni Interfaces Media</title>
 <link rel="stylesheet" href="../../style.css">
 <style>
-.media-placeholder{margin:28px 0;padding:22px;border:1px solid #d7e0f5;border-radius:10px;background:#f8faff;}
+.media-block{margin:28px 0;padding:18px;border:1px solid #d7e0f5;border-radius:10px;background:#fff;}
+.media-block video{width:900px;max-width:100%;height:auto;display:block;margin:12px auto;border-radius:6px;}
+.video-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px;}
+.video-card{padding:14px;border:1px solid #e0e6f3;border-radius:8px;background:#fafbff;}
+.video-card video{width:100%;height:auto;}
 </style>
 </head>
 <body>
@@ -25,13 +29,41 @@
 <main class="content">
 <h1>800H/Ni Interfaces: Figures and Simulation Videos</h1>
 <p><a href="index.html">← Back to 800H/Ni project description</a></p>
-<div class="media-placeholder">
-<h2>Media section ready</h2>
-<p>No public-facing figures or simulation videos have been added yet.</p>
-<p>Future content can include the interface atomic structure, irradiated-defect configurations, stress-strain response, diffusion or dislocation visualizations, and machine-learning feature-importance or prediction plots.</p>
+<p>Selected atomistic visualizations of irradiation-assisted void evolution and shrinkage in the 800H/Ni workflow.</p>
+
+<div class="media-block">
+<h2>1 nm Void</h2>
+<div class="video-grid">
+<div class="video-card"><h3>1 keV</h3><video controls preload="metadata"><source src="1nm_1kev_void_shrikage.mp4" type="video/mp4"></video></div>
+<div class="video-card"><h3>5 keV</h3><video controls preload="metadata"><source src="1nm_5kev_void_shrikage.mp4" type="video/mp4"></video></div>
+<div class="video-card"><h3>10 keV</h3><video controls preload="metadata"><source src="1nm_10kev_void_shrikage.mp4" type="video/mp4"></video></div>
 </div>
+</div>
+
+<div class="media-block">
+<h2>2 nm Void</h2>
+<div class="video-grid">
+<div class="video-card"><h3>1 keV</h3><video controls preload="metadata"><source src="2nm_1kev_void_shrikage.mp4" type="video/mp4"></video></div>
+<div class="video-card"><h3>5 keV</h3><video controls preload="metadata"><source src="2nm_5kev_void_shrikage.mp4" type="video/mp4"></video></div>
+<div class="video-card"><h3>10 keV</h3><video controls preload="metadata"><source src="2nm_10kev_void_shrikage.mp4" type="video/mp4"></video></div>
+</div>
+</div>
+
+<div class="media-block">
+<h2>3 nm Void</h2>
+<div class="video-grid">
+<div class="video-card"><h3>1 keV</h3><video controls preload="metadata"><source src="3nm_1kev_void_shrikage.mp4" type="video/mp4"></video></div>
+<div class="video-card"><h3>5 keV</h3><video controls preload="metadata"><source src="3nm_5kev_void_shrikage.mp4" type="video/mp4"></video></div>
+</div>
+</div>
+
+<div class="media-block">
+<h2>Graphical Abstract</h2>
+<p><a href="GRAPHICAL%20ABSTRACT%20_FINAL.pdf" target="_blank">Open graphical abstract PDF →</a></p>
+</div>
+
 <hr>
-<p><i>Only selected public-facing media will be shown here. Detailed unpublished simulation data are intentionally excluded.</i></p>
+<p><i>Only selected public-facing media are shown here. If any MP4 does not play in a desktop browser, it should be re-encoded to H.264/yuv420p using the same web-video workflow used for the NiTi project.</i></p>
 </main>
 </div>
 <footer class="site-footer"><hr><p>© 2026 Mustafa Azeem. All rights reserved.</p></footer>
