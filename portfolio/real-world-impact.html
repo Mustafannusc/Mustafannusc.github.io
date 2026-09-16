@@ -11,7 +11,7 @@
 .impact-hero h1{margin-bottom:8px}.impact-hero p{max-width:1100px}
 .impact-banner{padding:16px 18px;margin:18px 0 26px;border-left:5px solid #1f4ed8;background:#f6f8fd}
 .system-schematic{margin:28px 0;padding:18px;border:1px solid #dfe5f2;border-radius:12px;background:#fff}
-.system-schematic svg{width:100%;height:auto;display:block;max-height:640px}
+.system-schematic img{width:100%;height:auto;display:block;border-radius:8px}
 .flow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin:24px 0}
 .flow div{padding:12px 10px;border:1px solid #d7e0f5;border-radius:8px;text-align:center;background:#f9fbff;font-weight:600;min-width:0}
 .flow .arrow{border:none;background:transparent;font-size:22px;align-self:center;padding:0}
@@ -53,66 +53,7 @@
 <div class="impact-banner"><b>Engineering translation:</b> atomic mechanism → property prediction → component-level risk or performance indicator → material/process decision → experimental or system-level validation.</div>
 
 <section class="system-schematic">
-<h2>Nuclear-Energy Application Map</h2>
-<p class="note">Schematic, not to scale. It shows where the research questions connect to real reactor material systems.</p>
-<svg viewBox="0 0 1200 560" role="img" aria-label="Compact nuclear reactor application map linking four materials research projects to reactor components">
-<defs>
-<linearGradient id="vessel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eef3fb"/><stop offset="1" stop-color="#cfd9ea"/></linearGradient>
-<linearGradient id="core" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffcf66"/><stop offset="1" stop-color="#f07f2f"/></linearGradient>
-<marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#3158a8"/></marker>
-</defs>
-
-<!-- left cards -->
-<rect x="30" y="55" width="300" height="150" rx="16" fill="#f7f9ff" stroke="#3158a8" stroke-width="2"/>
-<text x="52" y="88" font-size="22" font-weight="700" fill="#1f4ed8">SiC/PyC/SiC Interfaces</text>
-<text x="52" y="118" font-size="16" fill="#222">Fuel cladding / ceramic-composite interfaces</text>
-<text x="52" y="148" font-size="15" fill="#444">Predict: adhesion, debonding, irradiation response</text>
-<text x="52" y="176" font-size="15" fill="#444">Engineering question: will the interface retain integrity?</text>
-
-<rect x="30" y="340" width="300" height="150" rx="16" fill="#fffaf3" stroke="#c96a14" stroke-width="2"/>
-<text x="52" y="373" font-size="22" font-weight="700" fill="#b85b0c">ODS Steels</text>
-<text x="52" y="403" font-size="16" fill="#222">Core internals / radiation-tolerant structures</text>
-<text x="52" y="433" font-size="15" fill="#444">Predict: defect sinks, strengthening, damage evolution</text>
-<text x="52" y="461" font-size="15" fill="#444">Engineering question: how long can the alloy resist damage?</text>
-
-<!-- right cards -->
-<rect x="870" y="55" width="300" height="150" rx="16" fill="#f8f5ff" stroke="#7652c7" stroke-width="2"/>
-<text x="892" y="88" font-size="22" font-weight="700" fill="#6840bf">800H/Ni Interfaces</text>
-<text x="892" y="118" font-size="16" fill="#222">Heat exchangers / high-temperature interfaces</text>
-<text x="892" y="148" font-size="15" fill="#444">Predict: diffusion, void evolution, interface integrity</text>
-<text x="892" y="176" font-size="15" fill="#444">Engineering question: where does integrity begin to degrade?</text>
-
-<rect x="870" y="340" width="300" height="150" rx="16" fill="#f4fbf6" stroke="#2f7d46" stroke-width="2"/>
-<text x="892" y="373" font-size="22" font-weight="700" fill="#27703c">HEA / RMPEA Design</text>
-<text x="892" y="403" font-size="16" fill="#222">Extreme-temperature nuclear & aerospace structures</text>
-<text x="892" y="433" font-size="15" fill="#444">Predict: strength, stability, composition trends</text>
-<text x="892" y="461" font-size="15" fill="#444">Engineering question: which alloy should be tested next?</text>
-
-<!-- reactor -->
-<path d="M495 80 Q600 25 705 80 L735 105 L735 445 Q735 490 690 515 Q600 550 510 515 Q465 490 465 445 L465 105 Z" fill="url(#vessel)" stroke="#4e5968" stroke-width="4"/>
-<rect x="510" y="125" width="180" height="310" rx="28" fill="#eef5ff" stroke="#6d86b7" stroke-width="2"/>
-<rect x="545" y="180" width="22" height="205" fill="url(#core)" stroke="#b96d20"/>
-<rect x="589" y="180" width="22" height="205" fill="url(#core)" stroke="#b96d20"/>
-<rect x="633" y="180" width="22" height="205" fill="url(#core)" stroke="#b96d20"/>
-<rect x="495" y="130" width="20" height="270" rx="9" fill="#60a7d6"/>
-<rect x="685" y="130" width="20" height="270" rx="9" fill="#60a7d6"/>
-<line x1="530" y1="105" x2="530" y2="55" stroke="#566" stroke-width="8"/>
-<line x1="570" y1="105" x2="570" y2="45" stroke="#566" stroke-width="8"/>
-<line x1="630" y1="105" x2="630" y2="45" stroke="#566" stroke-width="8"/>
-<line x1="670" y1="105" x2="670" y2="55" stroke="#566" stroke-width="8"/>
-<text x="600" y="465" text-anchor="middle" font-size="18" font-weight="700" fill="#1f4ed8">Reactor core & structural region</text>
-<text x="600" y="492" text-anchor="middle" font-size="14" fill="#555">radiation + heat + stress + interfaces</text>
-
-<!-- arrows -->
-<line x1="330" y1="130" x2="500" y2="185" stroke="#3158a8" stroke-width="3" marker-end="url(#arr)"/>
-<line x1="330" y1="412" x2="505" y2="362" stroke="#c96a14" stroke-width="3" marker-end="url(#arr)"/>
-<line x1="870" y1="130" x2="700" y2="185" stroke="#7652c7" stroke-width="3" marker-end="url(#arr)"/>
-<line x1="870" y1="412" x2="695" y2="362" stroke="#2f7d46" stroke-width="3" marker-end="url(#arr)"/>
-
-<!-- center labels -->
-<rect x="475" y="15" width="250" height="38" rx="10" fill="#eef3ff" stroke="#3158a8"/>
-<text x="600" y="40" text-anchor="middle" font-size="18" font-weight="700" fill="#1f4ed8">Where atomistic research meets reactor design</text>
-</svg>
+<img src="nuclear%20energy%20application%20map.png" alt="Nuclear energy application map showing LWRs, advanced fission reactors, SMRs, molten-salt reactors, and materials research connections">
 </section>
 
 <h2>What the Simulation Actually Produces for Engineering</h2>
