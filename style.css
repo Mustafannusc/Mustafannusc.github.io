@@ -84,7 +84,7 @@ body {
 .content {
     flex: 1;
     min-width: 0;
-    padding: 30px 28px;
+    padding: 18px 24px;
 }
 
 /* =========================
@@ -99,8 +99,8 @@ h1 {
 
 h2 {
     font-size: 20px;
-    margin-top: 30px;
-    margin-bottom: 10px;
+    margin-top: 18px;
+    margin-bottom: 7px;
 }
 
 h3 {
@@ -117,23 +117,23 @@ h3 {
    ========================= */
 
 p {
-    margin: 10px 0;
+    margin: 6px 0;
 }
 
 ul {
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin-top: 6px;
+    margin-bottom: 12px;
     padding-left: 22px;
 }
 
 li {
-    margin-bottom: 6px;
+    margin-bottom: 4px;
 }
 
 hr {
     border: none;
     border-top: 1px solid #cccccc;
-    margin: 15px 0 25px 0;
+    margin: 8px 0 14px 0;
 }
 
 /* =========================
@@ -174,7 +174,7 @@ th {
    ========================= */
 
 .profile-links {
-    margin: 12px 0 20px 0;
+    margin: 8px 0 12px 0;
 }
 
 .badge {
@@ -469,7 +469,7 @@ input[type="submit"]:hover {
 .gallery-folder-card p {
     color: #444;
     line-height: 1.6;
-    margin-bottom: 18px;
+    margin-bottom: 10px;
 }
 
 /* Open folder link */
@@ -528,8 +528,8 @@ input[type="submit"]:hover {
    ========================================================== */
 
 .home-hero {
-    padding: 28px 30px;
-    margin-bottom: 28px;
+    padding: 20px 24px;
+    margin-bottom: 14px;
     border: 1px solid #d7e0f5;
     border-top: 6px solid #1f4ed8;
     border-radius: 12px;
@@ -554,8 +554,8 @@ input[type="submit"]:hover {
 }
 
 .home-card {
-    margin-bottom: 24px;
-    padding: 22px 26px;
+    margin-bottom: 14px;
+    padding: 16px 20px;
     border: 1px solid #dfe5f2;
     border-radius: 10px;
     background: #ffffff;
@@ -1016,8 +1016,8 @@ body:has(.nav a.active[href="services.html"]) {
 }
 
 .content > h1:first-child {
-    margin: 0 0 24px 0;
-    padding: 18px 22px;
+    margin: 0 0 12px 0;
+    padding: 12px 18px;
     color: var(--page-accent) !important;
     background: linear-gradient(180deg, #ffffff 0%, var(--page-accent-soft) 100%);
     border: 1px solid var(--page-accent-line);
@@ -1544,5 +1544,41 @@ body:has(.nav a.active[href="grants.html"]) .grant-agency {
     .content > h1:first-child,
     .home-hero h1 {
         font-size: 18px !important;
+    }
+}
+
+/* ==========================================================
+   GLOBAL COMPACT VERTICAL RHYTHM
+   Reduces unused whitespace while preserving page hierarchy.
+   ========================================================== */
+.content > h2,
+.home-card > h2,
+.teaching-section > h2,
+.review-year > h2,
+.pub-year > h2 {
+    margin-top: 14px !important;
+    margin-bottom: 7px !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+}
+
+.home-card {
+    margin-top: 10px !important;
+    margin-bottom: 12px !important;
+}
+
+.content > hr {
+    margin-top: 7px !important;
+    margin-bottom: 12px !important;
+}
+
+@media (max-width: 800px) {
+    .content {
+        padding-top: 8px !important;
+        padding-bottom: 12px !important;
+    }
+
+    .content > h1:first-child {
+        margin-bottom: 7px !important;
     }
 }
