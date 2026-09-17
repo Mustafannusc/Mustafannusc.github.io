@@ -7,7 +7,7 @@
 <title>UMo-Al Fuel/Cladding Interface Modeling - Dr. M. Mustafa Azeem</title>
 <link rel="stylesheet" href="../../style.css">
 <style>
-.callout{margin:20px 0;padding:16px 18px;border-left:5px solid #1f55d5;background:#f6f8ff}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin:22px 0}.card{padding:18px;border:1px solid #dfe5f2;border-radius:10px;background:#fff}.card h2{margin-top:0;color:#1f55d5}.status{display:inline-block;padding:4px 9px;border-radius:14px;background:#eef3ff;color:#1f55d5;font-weight:700;font-size:.88em}.warning{padding:14px 16px;border:1px solid #ead6a5;border-radius:8px;background:#fffaf0}.backlinks{margin:18px 0 30px 0}.flow{padding:12px 14px;margin:10px 0;border:1px solid #d7e0f5;border-radius:8px;background:#fafbff}.media-box{padding:20px;border:1px dashed #94a9dd;border-radius:10px;background:#fbfcff;text-align:center}
+.callout{margin:20px 0;padding:16px 18px;border-left:5px solid #1f55d5;background:#f6f8ff}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin:22px 0}.card{padding:18px;border:1px solid #dfe5f2;border-radius:10px;background:#fff}.card h2{margin-top:0;color:#1f55d5}.status{display:inline-block;padding:4px 9px;border-radius:14px;background:#eef3ff;color:#1f55d5;font-weight:700;font-size:.88em}.warning{padding:14px 16px;border:1px solid #ead6a5;border-radius:8px;background:#fffaf0}.backlinks{margin:18px 0 30px 0}.flow{padding:12px 14px;margin:10px 0;border:1px solid #d7e0f5;border-radius:8px;background:#fafbff}.media-box{padding:20px;border:1px solid #d7e0f5;border-radius:10px;background:#fbfcff}.media-box a{font-weight:700}.model-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:18px}.model-item{padding:14px;border:1px solid #dfe5f2;border-radius:9px;background:#fff}.model-item b{color:#1f55d5}
 </style>
 </head>
 <body>
@@ -19,54 +19,56 @@
 <li><a href="../../index.html">Homepage</a></li>
 <li><a href="../index.html">Research Portfolio</a></li>
 <li><a class="active" href="index.html">UMo-Al Fuel/Cladding</a></li>
-<li><a href="media.html">Figures & Videos</a></li>
+<li><a href="media.html">Figures & MD Snapshots</a></li>
 </ul>
 </aside>
 <main class="content">
 <h1>UMo-Al Monolithic Fuel and Cladding-Interface Modeling</h1>
-<p><b>Atomistic investigation of HIP-bonded AA6061 cladding, diffusion-barrier interfaces, residual-stress mechanisms, and delamination risk in U-Mo monolithic research-reactor fuel plates.</b></p>
+<p><b>Atomistic modeling of U-10Mo fuel, Zr diffusion barriers, AA6061 cladding, HIP-bonded interfaces, diffusion, residual-stress mechanisms, and delamination risk in monolithic research-reactor fuel plates.</b></p>
 <div class="backlinks"><a href="../index.html">← Back to Research Portfolio</a></div>
 
-<div class="callout"><b>Engineering objective:</b> connect interface chemistry, diffusion, defects, oxide/precipitate structure, thermal history, and mechanical loading to cladding bond strength and the initiation of cladding-cladding or fuel-cladding separation.</div>
+<div class="callout"><b>Engineering objective:</b> determine how fuel composition, Zr diffusion barriers, AA6061 chemistry, HIP processing, interface structure, diffusion, defects, and mechanical loading influence fuel-plate integrity and the initiation of fuel-cladding or cladding-cladding separation.</div>
 
-<h2>Real Fuel-System Context</h2>
-<p>Low-enriched U-Mo monolithic fuel concepts use a U-Mo fuel foil together with a Zr diffusion barrier and AA6061 cladding. Hot isostatic pressing (HIP) bonds the plate assembly. The interface region is therefore not merely a geometric boundary: its residual stress, local chemistry, oxide condition, precipitates, diffusion behavior, and irradiation response can affect plate integrity.</p>
+<h2>Fuel-Plate Architecture</h2>
+<p>The physical system of interest is a layered monolithic fuel plate built around <b>AA6061 cladding | Zr diffusion barrier | U-10Mo fuel | Zr diffusion barrier | AA6061 cladding</b>. The Zr layers restrict chemical interaction between the U-Mo fuel and Al-based cladding, while hot isostatic pressing consolidates the assembly. Atomic-scale behavior at these interfaces influences bond strength, diffusion, residual stress, local phase formation, and eventual delamination.</p>
 
-<div class="grid">
-<article class="card"><h2>Fuel Plate Architecture</h2><p>U-Mo fuel meat → Zr diffusion barrier → AA6061 cladding → HIP consolidation.</p><p><b>Component question:</b> can the bonded plate retain structural integrity through fabrication, handling, irradiation, and thermal-mechanical service?</p></article>
-<article class="card"><h2>Failure Mechanisms of Interest</h2><p>Cladding-cladding separation, interfacial delamination, residual stress from HIP, oxide/precipitate-controlled bonding, interdiffusion, post-irradiation degradation, and local mechanical-property mismatch.</p></article>
+<div class="model-strip">
+<div class="model-item"><b>U-10Mo fuel model</b><br>Atomistic U-Mo solid-solution model used to examine the fuel-side structure and establish a basis for interface construction.</div>
+<div class="model-item"><b>AA6061 cladding model</b><br>Multicomponent Al-Si-Mg-Cu-Fe alloy representation used to study thermal relaxation, mechanical response, and cladding-interface behavior.</div>
+<div class="model-item"><b>UMo-Zr-AA6061 interface model</b><br>Layered atomistic geometry representing the fuel, Zr diffusion barrier, and Al-alloy cladding in a component-relevant arrangement.</div>
 </div>
 
-<h2>Current Atomistic Modeling Scope</h2>
-<p><span class="status">Stage 1: AA6061 / AA6061 HIP interface</span></p>
-<p>The first reproducible model focuses on the cladding-cladding interface because it can be treated with a validated multicomponent Al-Si-Mg-Cu-Fe interaction model before introducing the much more demanding U-Mo-Zr-Al cross-interaction problem.</p>
-
-<div class="flow"><b>Model build:</b> construct two AA6061 slabs with controlled composition, orientation, surface separation, and optional non-diffusible/interface constraints.</div>
-<div class="flow"><b>HIP thermal history:</b> energy minimization → thermal ramp → hold near the literature HIP temperature range → cooling/relaxation.</div>
-<div class="flow"><b>Mechanical interrogation:</b> tensile separation or normal loading across the bonded interface to obtain traction, peak stress, separation, and work-of-separation trends.</div>
-<div class="flow"><b>Transport/interfacial analysis:</b> species-resolved density profiles, mean-squared displacement, mixing width, local coordination/structure, void formation, and diffusion near the interface.</div>
-
-<h2>Connection to Experiment</h2>
-<p>Published characterization of HIP-bonded AA6061/AA6061 interfaces reports Mg-Si-rich precipitates, MgO-related nanoscale features, Fe-rich phases, oxide-thickness effects, and a strong dependence of bond quality on HIP processing conditions. The simulation program is designed to test which atomic-scale mechanisms could explain those experimentally observed trends and to identify quantities that can be compared with mechanical testing and microscopy.</p>
-
-<h2>Planned Quantitative Outputs</h2>
+<h2>Why This Matters</h2>
 <div class="grid">
-<article class="card"><h2>Interface Mechanics</h2><p>Traction-separation curve, peak interface stress, critical opening displacement, work of separation, local stress concentration, and defect nucleation.</p></article>
-<article class="card"><h2>Thermal / Diffusion Response</h2><p>Temperature-dependent diffusion, mixing width, species redistribution, thermal expansion, and interface structural stability.</p></article>
-<article class="card"><h2>Microstructure Descriptors</h2><p>Local atomic structure, coordination, dislocation/defect evolution, free-volume/void indicators, and concentration profiles across the interface.</p></article>
-<article class="card"><h2>Engineering Translation</h2><p>Identify conditions that strengthen or weaken the HIP bond and prioritize fabrication temperatures, interface states, and validation tests.</p></article>
+<article class="card"><h2>Fuel Integrity</h2><p>Monolithic U-Mo fuels are designed for high uranium density while supporting conversion from highly enriched to low-enriched uranium research-reactor fuels. Interface integrity is therefore central to reliable plate performance.</p></article>
+<article class="card"><h2>HIP Bonding</h2><p>HIP creates the bonded plate, but thermal history, oxide state, precipitates, diffusion, and mechanical-property mismatch can influence residual stress and bond strength.</p></article>
+<article class="card"><h2>Diffusion Barrier</h2><p>The Zr interlayer is intended to suppress unfavorable fuel-cladding chemical interaction. Modeling can help identify how its thickness, structure, and interfaces affect transport and bonding.</p></article>
+<article class="card"><h2>Delamination Risk</h2><p>Normal separation, local void formation, interface mixing, irradiation defects, and stress concentration can be studied at atomic scale to identify mechanisms that may precede macroscopic separation.</p></article>
 </div>
 
-<h2>Future Model Extensions</h2>
-<p>After the AA6061/AA6061 baseline is validated, the project can progress toward oxide-containing cladding interfaces, Zr/Al interdiffusion, U-Mo/Zr/Al layered models, irradiation-defect interactions, and coupling atomistic outputs to continuum residual-stress or fuel-performance models.</p>
+<h2>Simulation Program</h2>
+<div class="flow"><b>1. Constituent validation:</b> establish stable U-Mo, Zr, and AA6061 atomistic models and verify structural, thermal, and mechanical behavior against appropriate references.</div>
+<div class="flow"><b>2. Interface construction:</b> construct AA6061/AA6061, Zr/AA6061, U-Mo/Zr, and eventually the full AA6061/Zr/U-Mo/Zr/AA6061 stack.</div>
+<div class="flow"><b>3. HIP-relevant thermal cycle:</b> minimize, heat toward the HIP temperature range, hold, cool, and monitor atomic rearrangement, interface mixing, residual structure, and free-volume evolution.</div>
+<div class="flow"><b>4. Mechanical separation:</b> apply interface-normal tensile loading to obtain peak traction, separation behavior, work of separation, defect nucleation, and the atomistic pathway to delamination.</div>
+<div class="flow"><b>5. Irradiation / post-irradiation extension:</b> introduce defects or displacement-cascade conditions after the baseline interface physics is validated.</div>
 
-<div class="warning"><b>Potential-selection requirement:</b> the Al-Si-Mg-Cu-Fe MEAM model can support the metallic AA6061 baseline only if the exact parameter set is validated for the target properties. An Al<sub>2</sub>O<sub>3</sub>-containing interface requires an interaction model that explicitly and consistently includes oxygen. A full U-Mo-Zr-Al model requires validated cross interactions for those species. These extensions should not be created by mixing unrelated potentials without verification.</div>
+<h2>Quantities Extracted from MD</h2>
+<div class="grid">
+<article class="card"><h2>Interface Mechanics</h2><p>Traction-separation response, peak interface stress, critical opening displacement, work of separation, local stress concentration, void initiation, and failure morphology.</p></article>
+<article class="card"><h2>Diffusion & Mixing</h2><p>Species-resolved concentration profiles, mixing width, mean-squared displacement, migration across Zr/Al and U-Mo/Zr interfaces, and temperature-dependent transport.</p></article>
+<article class="card"><h2>Atomic Structure</h2><p>Local coordination, structural disorder, phase/chemical ordering indicators, free volume, defect evolution, and interface reconstruction during thermal and mechanical loading.</p></article>
+<article class="card"><h2>Engineering Translation</h2><p>Identify interface states and processing conditions that are more resistant to diffusion-driven degradation or delamination and prioritize experimental HIP, microscopy, and mechanical-validation conditions.</p></article>
+</div>
 
-<h2>Figures and MD Videos</h2>
-<div class="media-box"><p><b>Simulation media will be added after the first validated runs.</b></p><p>Planned website outputs: initial AA6061/AA6061 interface, relaxed HIP interface, species-colored diffusion snapshot, tensile/debonding sequence, traction-separation curve, and concentration profile across the interface.</p><p><a href="media.html">Open media page →</a></p></div>
+<h2>Real MD / OVITO Snapshots</h2>
+<div class="media-box"><p>The media page is being configured around actual simulation snapshots from this work: the U-Mo fuel model, AA6061 alloy model, and layered UMo-Zr-AA6061 interface model.</p><p><a href="media.html">Open figures & MD snapshots →</a></p></div>
+
+<h2>Model-Validation Boundary</h2>
+<div class="warning"><b>Important:</b> geometry visualization and constituent models can be shown as model construction. Quantitative full-stack U-Mo-Zr-Al diffusion, stress, or delamination results should only be reported after selecting and validating a compatible interatomic-potential description with defensible cross interactions across U, Mo, Zr, Al, and relevant AA6061 solutes.</div>
 
 <hr>
-<p><i>This page distinguishes completed baseline modeling concepts from planned extensions. Quantitative findings will be added only after the corresponding simulation and validation steps are completed.</i></p>
+<p><i>Selected public-facing model geometry and simulation outputs are shown. Proprietary, collaborator-owned, or unvalidated quantitative data are excluded.</i></p>
 </main>
 </div>
 <footer class="site-footer"><hr><p>© 2026 Mustafa Azeem. All rights reserved.</p></footer>
