@@ -1,8 +1,7 @@
 # Figures
 
-Upload public-facing molten-salt project images here.
-
-Recommended contents:
+ Molten-salt project images.
+contents:
 - Matlantis/PFP molten-salt configurations
 - CaF2-MgF2 liquid structure snapshots
 - oxide-additive configurations
