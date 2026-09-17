@@ -1248,3 +1248,301 @@ body:has(.nav a.active[href="grants.html"]) .grant-agency {
 
     font-weight: 800 !important;
 }
+
+/* ==========================================================
+   MOBILE FIRST-LOOK OPTIMIZATION
+   Keeps navigation and selected content side-by-side on phones.
+   Desktop and laptop layout above 800px is unchanged.
+   ========================================================== */
+
+@media (max-width: 800px) {
+    body {
+        font-size: 12.75px;
+        line-height: 1.42;
+        overflow-x: hidden;
+    }
+
+    .container {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: flex-start;
+        width: 100%;
+        min-height: 100vh;
+    }
+
+    .sidebar {
+        position: sticky;
+        top: 0;
+        align-self: flex-start;
+        width: clamp(108px, 29vw, 145px) !important;
+        flex: 0 0 clamp(108px, 29vw, 145px) !important;
+        height: 100vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding: 8px 5px 10px 5px !important;
+        border-right: 2px solid #1f4ed8 !important;
+        border-bottom: none !important;
+        background: #ffffff;
+        z-index: 20;
+        scrollbar-width: thin;
+    }
+
+    .sidebar h2 {
+        margin: 0 2px 6px 2px !important;
+        font-size: 12.5px !important;
+        line-height: 1.18;
+        text-align: center;
+    }
+
+    .lab-logo-box {
+        margin: 0 0 6px 0 !important;
+    }
+
+    .lab-logo {
+        max-width: 72px !important;
+        max-height: 72px;
+        object-fit: contain;
+    }
+
+    .nav li {
+        margin-bottom: 1px !important;
+    }
+
+    .nav a {
+        padding: 3px 4px !important;
+        font-size: 10.5px !important;
+        line-height: 1.2 !important;
+        border-radius: 4px;
+        overflow-wrap: anywhere;
+    }
+
+    .nav a.active {
+        border-left-width: 3px !important;
+        border-right-width: 3px !important;
+        box-shadow: none !important;
+    }
+
+    .content {
+        flex: 1 1 auto;
+        width: auto;
+        min-width: 0;
+        padding: 10px 9px 18px 10px !important;
+        overflow-wrap: anywhere;
+    }
+
+    .content > h1,
+    .content > h1:first-child,
+    .home-hero h1 {
+        font-size: 20px !important;
+        line-height: 1.18 !important;
+    }
+
+    .content > h1:first-child {
+        margin-bottom: 10px !important;
+        padding: 8px 9px !important;
+        border-top-width: 4px !important;
+        border-right-width: 3px !important;
+        border-radius: 7px !important;
+    }
+
+    h2,
+    .content h2,
+    .gallery-folder-card h2 {
+        font-size: 15.5px !important;
+        line-height: 1.25 !important;
+        margin-top: 16px;
+        margin-bottom: 6px;
+    }
+
+    h3,
+    .paper-entry h3,
+    .teaching-card h3 {
+        font-size: 14px !important;
+        line-height: 1.3 !important;
+        margin-top: 12px;
+    }
+
+    p {
+        margin: 6px 0;
+    }
+
+    ul,
+    ol {
+        margin-top: 6px;
+        margin-bottom: 10px;
+        padding-left: 17px;
+    }
+
+    li {
+        margin-bottom: 3px;
+    }
+
+    hr {
+        margin: 9px 0 13px 0;
+    }
+
+    .home-hero,
+    .publications-hero,
+    .teaching-hero,
+    .reviewer-hero,
+    body:has(.nav a.active[href="grants.html"]) .grants-hero {
+        padding: 10px 11px !important;
+        margin-bottom: 12px !important;
+        border-top-width: 4px !important;
+        border-right-width: 3px !important;
+        border-radius: 8px !important;
+    }
+
+    .home-role {
+        font-size: 13.5px !important;
+        line-height: 1.3;
+        margin-bottom: 3px;
+    }
+
+    .home-focus {
+        margin-bottom: 8px !important;
+    }
+
+    .home-card,
+    .teaching-card,
+    .teaching-wide-card,
+    .paper-entry,
+    .gallery-folder-card,
+    .video-card,
+    .gallery-item,
+    .media-card,
+    .grant-card,
+    .reviewer-card {
+        padding: 9px !important;
+        margin-top: 8px;
+        margin-bottom: 9px;
+        border-radius: 7px;
+    }
+
+    .content > h2,
+    .home-card > h2,
+    .teaching-section > h2,
+    .review-year > h2,
+    .pub-year > h2,
+    body:has(.nav a.active[href="grants.html"]) .grant-year > h2 {
+        padding: 5px 7px !important;
+        margin-top: 14px !important;
+        margin-bottom: 8px !important;
+        border-left-width: 3px !important;
+        border-right-width: 3px !important;
+    }
+
+    .gallery-description,
+    .caption,
+    figcaption,
+    .publication-item figcaption,
+    .event-item figcaption,
+    .video-card figcaption,
+    .paper-entry p,
+    .teaching-role,
+    .teaching-period {
+        font-size: 11.5px !important;
+        line-height: 1.35 !important;
+    }
+
+    .publication-note,
+    .reviewer-note,
+    .feedback-intro {
+        padding: 7px 8px !important;
+        margin-bottom: 10px !important;
+        font-size: 11.5px !important;
+        line-height: 1.35 !important;
+    }
+
+    .gallery-grid,
+    .publication-grid,
+    .gallery-folder-grid,
+    .video-grid,
+    .teaching-card-grid,
+    .teaching-topic-grid {
+        grid-template-columns: 1fr !important;
+        gap: 9px !important;
+        margin-top: 10px !important;
+        margin-bottom: 12px !important;
+    }
+
+    img,
+    video {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .publication-item img,
+    .event-item img,
+    .gallery-item img {
+        height: auto !important;
+        max-height: 300px !important;
+        object-fit: contain;
+    }
+
+    .video-card video {
+        max-height: 300px !important;
+    }
+
+    table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        font-size: 11px;
+        margin: 8px 0;
+    }
+
+    th,
+    td {
+        padding: 4px 5px;
+    }
+
+    .profile-links {
+        margin: 7px 0 9px 0 !important;
+    }
+
+    .badge {
+        min-width: 27px !important;
+        height: 27px !important;
+        padding: 0 6px !important;
+        margin-right: 3px !important;
+        font-size: 10.5px !important;
+    }
+
+    .site-footer {
+        margin-top: 20px;
+        font-size: 11px;
+    }
+
+    .visitor-counter {
+        font-size: 10px;
+        padding: 2px 4px;
+        right: 4px;
+        bottom: 4px;
+    }
+}
+
+@media (max-width: 380px) {
+    .sidebar {
+        width: 104px !important;
+        flex-basis: 104px !important;
+        padding-left: 4px !important;
+        padding-right: 4px !important;
+    }
+
+    .nav a {
+        font-size: 10px !important;
+        padding: 3px !important;
+    }
+
+    .content {
+        padding-left: 8px !important;
+        padding-right: 7px !important;
+    }
+
+    .content > h1,
+    .content > h1:first-child,
+    .home-hero h1 {
+        font-size: 18px !important;
+    }
+}
