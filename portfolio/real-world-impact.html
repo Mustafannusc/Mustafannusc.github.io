@@ -21,7 +21,8 @@
 .metric{font-weight:700}.decision{padding:10px 12px;margin-top:12px;border-left:4px solid #1f4ed8;background:#f7f9ff}
 .industry-table{overflow-x:auto;margin-top:24px}.industry-table table{min-width:900px}.industry-table th{background:#eef3ff;color:#1f4ed8}
 .note{font-size:.92em;color:#555}.source-note{font-size:.9em;color:#555;margin-top:24px}
-@media(max-width:800px){.flow{grid-template-columns:1fr}.flow .arrow{transform:rotate(90deg)}.impact-grid{grid-template-columns:1fr}.impact-hero{padding:20px}}
+.portfolio-subnav{margin-left:16px}.portfolio-subnav a{font-size:13px;color:#444;padding-top:5px;padding-bottom:5px}.portfolio-subnav a.active{font-size:13px}
+@media(max-width:800px){.flow{grid-template-columns:1fr}.flow .arrow{transform:rotate(90deg)}.impact-grid{grid-template-columns:1fr}.impact-hero{padding:20px}.portfolio-subnav{margin-left:7px}.portfolio-subnav a,.portfolio-subnav a.active{font-size:9.5px!important;padding-top:2px!important;padding-bottom:2px!important}}
 </style>
 </head>
 <body>
@@ -36,7 +37,9 @@
 <li><a href="../publications.html">Publications</a></li>
 <li><a href="../projects.html">Projects</a></li>
 <li><a href="index.html">Research Portfolio</a></li>
-<li><a class="active" href="real-world-impact.html">Engineering & Industry Impact</a></li>
+<li class="portfolio-subnav"><a href="what-my-research-does.html">What My Research Does</a></li>
+<li class="portfolio-subnav"><a class="active" href="real-world-impact.html">Engineering & Industry Impact</a></li>
+<li class="portfolio-subnav"><a href="model-to-product.html">Model to Product</a></li>
 <li><a href="../teaching.html">Teaching</a></li>
 <li><a href="../grants.html">Grants & Funding</a></li>
 <li><a href="../code.html">Code & Tools</a></li>
@@ -52,90 +55,30 @@
 <h1>From Atomistic Simulation to Engineering Decisions</h1>
 <p><b>My simulations are not the end product.</b> They are a virtual materials laboratory used to connect atomic-scale mechanisms to measurable engineering properties, component reliability, manufacturing decisions, and material-selection questions in nuclear energy, aerospace, high-temperature systems, and additive manufacturing.</p>
 </section>
-
 <div class="impact-banner"><b>Engineering translation:</b> atomic mechanism → property prediction → component-level risk or performance indicator → material/process decision → experimental or system-level validation.</div>
-
-<section class="system-schematic">
-<img src="nuclear%20energy%20application%20map.png" alt="Nuclear energy application map showing LWRs, advanced fission reactors, SMRs, molten-salt reactors, and materials research connections">
-</section>
-
+<section class="system-schematic"><img src="nuclear%20energy%20application%20map.png" alt="Nuclear energy application map showing LWRs, advanced fission reactors, SMRs, molten-salt reactors, and materials research connections"></section>
 <h2>What the Simulation Actually Produces for Engineering</h2>
-<div class="flow">
-<div>1. Real service condition<br><span class="note">radiation, heat, stress, laser processing</span></div><div class="arrow">→</div><div>2. Atomic mechanism<br><span class="note">defects, interfaces, diffusion, phase/order, melting</span></div><div class="arrow">→</div><div>3. Engineering metric<br><span class="note">strength, adhesion, defect density, mixing, thermal/process response</span></div>
-</div>
-<div class="flow">
-<div>4. Model / ML surrogate<br><span class="note">fast prediction across conditions</span></div><div class="arrow">→</div><div>5. Engineering decision<br><span class="note">material, composition, interface, process window</span></div><div class="arrow">→</div><div>6. Validation / qualification<br><span class="note">experiment, component model, irradiation or manufacturing test</span></div>
-</div>
-
+<div class="flow"><div>1. Real service condition<br><span class="note">radiation, heat, stress, laser processing</span></div><div class="arrow">→</div><div>2. Atomic mechanism<br><span class="note">defects, interfaces, diffusion, phase/order, melting</span></div><div class="arrow">→</div><div>3. Engineering metric<br><span class="note">strength, adhesion, defect density, mixing, thermal/process response</span></div></div>
+<div class="flow"><div>4. Model / ML surrogate<br><span class="note">fast prediction across conditions</span></div><div class="arrow">→</div><div>5. Engineering decision<br><span class="note">material, composition, interface, process window</span></div><div class="arrow">→</div><div>6. Validation / qualification<br><span class="note">experiment, component model, irradiation or manufacturing test</span></div></div>
 <section class="impact-grid">
-<article class="impact-card">
-<h2>1. SiC/PyC/SiC Interface Mechanics & Irradiation</h2>
-<span class="tag">Nuclear fuel systems</span><span class="tag">Ceramic composites</span><span class="tag">Fusion / fission</span>
-<p><b>Real-world problem:</b> SiC-based composite systems can experience interfacial damage, irradiation-induced defects, thermal stress, and loss of load transfer.</p>
-<p><span class="metric">What I calculate:</span> interfacial traction/separation, adhesion/debonding, contact evolution, indentation response, defect production and irradiation-driven structural change.</p>
-<p><span class="metric">Engineering property represented:</span> interface strength, damage tolerance, crack/debonding tendency, local mechanical response.</p>
-<div class="decision"><b>Decision supported:</b> Which interface architecture and processing state is more likely to retain integrity under thermal-mechanical and irradiation loading?</div>
-<p class="note">Application context: SiC/SiC composites are leading accident-tolerant fuel-cladding candidates and are also studied for fusion structural/first-wall environments.</p>
-</article>
-
-<article class="impact-card">
-<h2>2. NiTi LPBF & Nanoparticle Consolidation</h2>
-<span class="tag">Additive manufacturing</span><span class="tag">Aerospace</span><span class="tag">Biomedical</span><span class="tag">Actuators</span>
-<p><b>Real-world problem:</b> Laser powder-bed fusion must melt and consolidate feedstock without excessive porosity, poor bonding, composition loss, or undesirable phase evolution.</p>
-<p><span class="metric">What I calculate:</span> heating/melting behavior, time above melt, particle neck growth, wetting/contact, mixing width, Ni penetration, porosity-related descriptors, retained phase/order and cooling-rate descriptors.</p>
-<p><span class="metric">Engineering property represented:</span> consolidation quality, melt efficiency, interparticle bonding, process sensitivity and expected functional-material quality.</p>
-<div class="decision"><b>Decision supported:</b> Which laser-energy/process conditions are worth testing experimentally, and which conditions are likely to produce weak or defective consolidation?</div>
-</article>
-
-<article class="impact-card">
-<h2>3. ODS Steels: Irradiation Damage & Nanomechanics</h2>
-<span class="tag">Reactor core materials</span><span class="tag">Radiation tolerance</span><span class="tag">Structural alloys</span>
-<p><b>Real-world problem:</b> Reactor structural materials accumulate vacancies, interstitials and dislocation structures while operating under neutron irradiation and high temperature.</p>
-<p><span class="metric">What I calculate:</span> displacement-cascade damage, defect survival/clustering, oxide-particle and grain-boundary sink behavior, dislocation-obstacle interaction, nanoindentation response and diffusion.</p>
-<p><span class="metric">Engineering property represented:</span> irradiation hardening tendency, defect-removal efficiency, obstacle strengthening, microstructural stability and damage accumulation.</p>
-<div class="decision"><b>Decision supported:</b> How should oxide size/distribution, interfaces and microstructure be engineered to improve strength while reducing long-term irradiation damage?</div>
-</article>
-
-<article class="impact-card">
-<h2>4. HEA / RMPEA Alloy Design</h2>
-<span class="tag">Aerospace</span><span class="tag">Nuclear</span><span class="tag">Power generation</span><span class="tag">Extreme temperature</span>
-<p><b>Real-world problem:</b> Conventional alloys lose strength or stability at extreme temperature, but the compositional search space of refractory multi-principal-element alloys is enormous.</p>
-<p><span class="metric">What I calculate:</span> composition-dependent structural/mechanical response, local order, deformation trends and candidate descriptors for screening and machine-learning models.</p>
-<p><span class="metric">Engineering property represented:</span> high-temperature strength potential, stability, deformation resistance and composition-property trends.</p>
-<div class="decision"><b>Decision supported:</b> Which alloy compositions should move forward to CALPHAD/DFT refinement, melting, additive manufacturing and mechanical/oxidation testing?</div>
-</article>
-
-<article class="impact-card">
-<h2>5. 800H/Ni Interfaces: MD + ML</h2>
-<span class="tag">High-temperature reactors</span><span class="tag">Heat exchangers</span><span class="tag">Interfaces</span><span class="tag">ML surrogate models</span>
-<p><b>Real-world problem:</b> High-temperature components can fail from irradiation damage, void evolution, diffusion and degradation of bonded or dissimilar-material interfaces.</p>
-<p><span class="metric">What I calculate:</span> irradiation-induced defect evolution, void shrinkage/evolution, interface mixing/diffusion and mechanical response, then connect simulation outputs to ML prediction.</p>
-<p><span class="metric">Engineering property represented:</span> interface integrity, radiation-damage sensitivity, strength retention and defect-driven mechanical degradation.</p>
-<div class="decision"><b>Decision supported:</b> Which irradiation/interface conditions present the highest integrity risk, and where should expensive experiments or higher-scale models be concentrated?</div>
-<p class="note">Application context: Alloy 800H has a documented history in high-temperature gas-reactor heat exchangers and reactor-internal component studies. The modeled 800H/Ni interface is a research architecture used to study interface physics rather than a claim of a specific commercial joint.</p>
-</article>
+<article class="impact-card"><h2>1. SiC/PyC/SiC Interface Mechanics & Irradiation</h2><span class="tag">Nuclear fuel systems</span><span class="tag">Ceramic composites</span><span class="tag">Fusion / fission</span><p><b>Real-world problem:</b> SiC-based composite systems can experience interfacial damage, irradiation-induced defects, thermal stress, and loss of load transfer.</p><p><span class="metric">What I calculate:</span> interfacial traction/separation, adhesion/debonding, contact evolution, indentation response, defect production and irradiation-driven structural change.</p><p><span class="metric">Engineering property represented:</span> interface strength, damage tolerance, crack/debonding tendency, local mechanical response.</p><div class="decision"><b>Decision supported:</b> Which interface architecture and processing state is more likely to retain integrity under thermal-mechanical and irradiation loading?</div><p class="note">Application context: SiC/SiC composites are leading accident-tolerant fuel-cladding candidates and are also studied for fusion structural/first-wall environments.</p></article>
+<article class="impact-card"><h2>2. NiTi LPBF & Nanoparticle Consolidation</h2><span class="tag">Additive manufacturing</span><span class="tag">Aerospace</span><span class="tag">Biomedical</span><span class="tag">Actuators</span><p><b>Real-world problem:</b> Laser powder-bed fusion must melt and consolidate feedstock without excessive porosity, poor bonding, composition loss, or undesirable phase evolution.</p><p><span class="metric">What I calculate:</span> heating/melting behavior, time above melt, particle neck growth, wetting/contact, mixing width, Ni penetration, porosity-related descriptors, retained phase/order and cooling-rate descriptors.</p><p><span class="metric">Engineering property represented:</span> consolidation quality, melt efficiency, interparticle bonding, process sensitivity and expected functional-material quality.</p><div class="decision"><b>Decision supported:</b> Which laser-energy/process conditions are worth testing experimentally, and which conditions are likely to produce weak or defective consolidation?</div></article>
+<article class="impact-card"><h2>3. ODS Steels: Irradiation Damage & Nanomechanics</h2><span class="tag">Reactor core materials</span><span class="tag">Radiation tolerance</span><span class="tag">Structural alloys</span><p><b>Real-world problem:</b> Reactor structural materials accumulate vacancies, interstitials and dislocation structures while operating under neutron irradiation and high temperature.</p><p><span class="metric">What I calculate:</span> displacement-cascade damage, defect survival/clustering, oxide-particle and grain-boundary sink behavior, dislocation-obstacle interaction, nanoindentation response and diffusion.</p><p><span class="metric">Engineering property represented:</span> irradiation hardening tendency, defect-removal efficiency, obstacle strengthening, microstructural stability and damage accumulation.</p><div class="decision"><b>Decision supported:</b> How should oxide size/distribution, interfaces and microstructure be engineered to improve strength while reducing long-term irradiation damage?</div></article>
+<article class="impact-card"><h2>4. HEA / RMPEA Alloy Design</h2><span class="tag">Aerospace</span><span class="tag">Nuclear</span><span class="tag">Power generation</span><span class="tag">Extreme temperature</span><p><b>Real-world problem:</b> Conventional alloys lose strength or stability at extreme temperature, but the compositional search space of refractory multi-principal-element alloys is enormous.</p><p><span class="metric">What I calculate:</span> composition-dependent structural/mechanical response, local order, deformation trends and candidate descriptors for screening and machine-learning models.</p><p><span class="metric">Engineering property represented:</span> high-temperature strength potential, stability, deformation resistance and composition-property trends.</p><div class="decision"><b>Decision supported:</b> Which alloy compositions should move forward to CALPHAD/DFT refinement, melting, additive manufacturing and mechanical/oxidation testing?</div></article>
+<article class="impact-card"><h2>5. 800H/Ni Interfaces: MD + ML</h2><span class="tag">High-temperature reactors</span><span class="tag">Heat exchangers</span><span class="tag">Interfaces</span><span class="tag">ML surrogate models</span><p><b>Real-world problem:</b> High-temperature components can fail from irradiation damage, void evolution, diffusion and degradation of bonded or dissimilar-material interfaces.</p><p><span class="metric">What I calculate:</span> irradiation-induced defect evolution, void shrinkage/evolution, interface mixing/diffusion and mechanical response, then connect simulation outputs to ML prediction.</p><p><span class="metric">Engineering property represented:</span> interface integrity, radiation-damage sensitivity, strength retention and defect-driven mechanical degradation.</p><div class="decision"><b>Decision supported:</b> Which irradiation/interface conditions present the highest integrity risk, and where should expensive experiments or higher-scale models be concentrated?</div><p class="note">Application context: Alloy 800H has a documented history in high-temperature gas-reactor heat exchangers and reactor-internal component studies. The modeled 800H/Ni interface is a research architecture used to study interface physics rather than a claim of a specific commercial joint.</p></article>
 </section>
-
 <h2>Industry Translation Matrix</h2>
-<div class="industry-table">
-<table>
-<thead><tr><th>Portfolio project</th><th>Real component / process context</th><th>Primary engineering risk</th><th>Predicted or derived metrics</th><th>Who could use the result</th></tr></thead>
-<tbody>
+<div class="industry-table"><table><thead><tr><th>Portfolio project</th><th>Real component / process context</th><th>Primary engineering risk</th><th>Predicted or derived metrics</th><th>Who could use the result</th></tr></thead><tbody>
 <tr><td>SiC/PyC/SiC</td><td>SiC-based cladding / CMC interfaces / high-temperature ceramic structures</td><td>Debonding, cracking, irradiation degradation</td><td>Adhesion, traction, contact, defect evolution, local strength</td><td>Nuclear fuel/cladding developers, ceramic-composite groups, fusion materials teams</td></tr>
 <tr><td>NiTi LPBF</td><td>Laser powder-bed fusion of shape-memory components</td><td>Poor melting/consolidation, porosity, weak bonding, process sensitivity</td><td>Melt exposure, neck growth, mixing, wetting, phase/order and process descriptors</td><td>AM process engineers, aerospace/biomedical/actuator developers</td></tr>
 <tr><td>ODS steels</td><td>Radiation-tolerant core and structural alloys</td><td>Defect accumulation, irradiation hardening, dislocation pinning</td><td>Defect counts/clusters, sink behavior, strengthening, indentation response</td><td>Reactor-material developers, irradiation programs, structural-alloy designers</td></tr>
 <tr><td>HEA/RMPEA</td><td>Extreme-temperature structural alloys</td><td>Loss of strength/stability, huge composition search space</td><td>Composition-property trends, deformation response, screening descriptors</td><td>Aerospace, nuclear, turbine/power-generation and alloy-development teams</td></tr>
 <tr><td>800H/Ni + ML</td><td>High-temperature reactor/heat-exchanger material systems and dissimilar interfaces</td><td>Interface degradation, diffusion, irradiation defects and strength loss</td><td>Defect/void evolution, diffusion/mixing, mechanical response, ML predictions</td><td>Nuclear heat-exchanger/materials teams, interface engineers, qualification programs</td></tr>
-</tbody>
-</table>
-</div>
-
+</tbody></table></div>
 <h2>How to Read My Computational Work</h2>
 <p>At the atomistic scale I do not simulate an entire reactor, turbine, implant, or printed component. I isolate the <b>rate-controlling mechanism</b> that governs failure or performance, such as a defect interacting with an oxide, an interface beginning to debond, a displacement cascade generating damage, atoms mixing across a bonded interface, or powder particles melting and forming a neck. Those mechanisms are converted into quantitative descriptors that can feed continuum models, process maps, machine-learning surrogates, experimental design and materials qualification.</p>
 <p>This is the role of atomistic and multiscale modeling in engineering: <b>reduce expensive trial-and-error by identifying mechanisms, ranking candidate conditions, and predicting where testing effort should be concentrated.</b></p>
-
 <p class="source-note"><b>Application-context note:</b> The component/application mappings on this page are based on established literature and national-laboratory usage contexts for SiC/SiC cladding, high-temperature Alloy 800H, ODS steels, refractory HEAs and additively manufactured NiTi. They are presented as engineering relevance and candidate-use contexts, not as claims that every portfolio model is a certified or deployed component.</p>
-
 <p><a href="index.html">← Back to Research Portfolio</a></p>
 </main>
 </div>
