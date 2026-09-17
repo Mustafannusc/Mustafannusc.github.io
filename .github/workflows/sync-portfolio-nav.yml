@@ -44,8 +44,15 @@ jobs:
                   path.write_text('\n'.join(lines) + ending, encoding='utf-8')
                   changed.append(str(path))
 
-          # Portfolio/project pages should retain their project-specific links,
-          # while also showing the complete site navigation visible on Homepage.
+          # Portfolio/project pages retain their project-specific links while also
+          # showing the complete global site navigation visible on Homepage.
+          global_before = [
+              ('Biography', '/biography.html'),
+              ('Research Interests', '/research.html'),
+              ('Publications', '/publications.html'),
+              ('Projects', '/projects.html'),
+          ]
+
           global_after = [
               ('Teaching', '/teaching.html'),
               ('Grants & Funding', '/grants.html'),
@@ -66,23 +73,26 @@ jobs:
               block = m.group(2)
               original_block = block
 
-              # Add Biography after Homepage if this older project navigation omits it.
-              if '>Biography</a>' not in block:
-                  block = re.sub(
-                      r'(<li><a(?: class="active")? href="[^"]*index\.html">Homepage</a></li>)',
-                      r'\1\n<li><a href="/biography.html">Biography</a></li>',
-                      block,
-                      count=1,
-                  )
+              # Insert any missing global links before Research Portfolio.
+              before_additions = []
+              for label, href in global_before:
+                  if f'>{label}</a>' not in block:
+                      before_additions.append(f'<li><a href="{href}">{label}</a></li>')
 
-              # Append any missing global links after project-specific navigation.
-              additions = []
+              if before_additions:
+                  portfolio_line = re.search(r'(^\s*<li><a[^>]*>Research Portfolio</a></li>)', block, flags=re.M)
+                  if portfolio_line:
+                      insert_text = '\n'.join(before_additions) + '\n'
+                      block = block[:portfolio_line.start()] + insert_text + block[portfolio_line.start():]
+
+              # Append missing global links after project-specific navigation.
+              after_additions = []
               for label, href in global_after:
                   if f'>{label}</a>' not in block:
-                      additions.append(f'<li><a href="{href}">{label}</a></li>')
+                      after_additions.append(f'<li><a href="{href}">{label}</a></li>')
 
-              if additions:
-                  block = block.rstrip() + '\n' + '\n'.join(additions) + '\n'
+              if after_additions:
+                  block = block.rstrip() + '\n' + '\n'.join(after_additions) + '\n'
 
               if block != original_block:
                   new_text = text[:m.start(2)] + block + text[m.end(2):]
