@@ -7,7 +7,7 @@
 <title>UMo-Al Fuel/Cladding Media - Dr. M. Mustafa Azeem</title>
 <link rel="stylesheet" href="../../style.css">
 <style>
-.media-card{margin:22px 0;padding:18px;border:1px solid #dfe5f2;border-radius:10px;background:#fff}.placeholder{padding:28px;border:1px dashed #94a9dd;border-radius:10px;background:#fbfcff;text-align:center;color:#555}.backlinks{margin:18px 0 30px 0}
+.media-card{margin:24px 0;padding:18px;border:1px solid #dfe5f2;border-radius:10px;background:#fff}.media-card img{width:100%;max-width:980px;height:auto;display:block;margin:12px auto;border-radius:8px}.caption{max-width:980px;margin:8px auto 0;color:#444;line-height:1.5}.backlinks{margin:18px 0 30px}.section-note{padding:14px 16px;border-left:4px solid #1f55d5;background:#f6f8ff;margin:18px 0}.lit-card{background:#fbfcff}.lit-card h2{color:#555}
 </style>
 </head>
 <body>
@@ -19,14 +19,44 @@
 <li><a href="../../index.html">Homepage</a></li>
 <li><a href="../index.html">Research Portfolio</a></li>
 <li><a href="index.html">UMo-Al Fuel/Cladding</a></li>
-<li><a class="active" href="media.html">Figures & Videos</a></li>
+<li><a class="active" href="media.html">Figures & MD Snapshots</a></li>
 </ul>
 </aside>
 <main class="content">
-<h1>UMo-Al Fuel/Cladding: Figures & MD Videos</h1>
+<h1>UMo-Al Fuel/Cladding: Figures & MD Snapshots</h1>
 <div class="backlinks"><a href="index.html">← Back to UMo-Al project</a></div>
-<div class="media-card"><h2>Planned Simulation Media</h2><div class="placeholder">Initial AA6061/AA6061 interface snapshot<br>Relaxed HIP-bonded interface<br>Species-resolved diffusion profile<br>Tensile/debonding sequence<br>Traction-separation curve<br>Interface concentration and defect maps</div></div>
-<p><i>Only validated simulation outputs will be posted here.</i></p>
+
+<div class="section-note"><b>Simulation media:</b> the first two figures below are real atomistic/OVITO models from this research workflow. Published figures are shown separately as engineering and experimental context.</div>
+
+<div class="media-card">
+<h2>1. AA6061 Cladding Atomistic Model</h2>
+<img src="umoal.png" alt="AA6061 cladding atomistic model in OVITO">
+<p class="caption">Multicomponent AA6061 model containing the Al matrix with alloying species used to represent the cladding-side material for thermal relaxation, interface construction, diffusion, and mechanical-response studies.</p>
+</div>
+
+<div class="media-card">
+<h2>2. UMo-Zr-AA6061 Layered Interface Model</h2>
+<img src="umoalzr.png" alt="UMo Zr AA6061 layered atomistic interface model">
+<p class="caption">Layered atomistic model combining U-Mo fuel, a Zr diffusion-barrier region, and AA6061 cladding. This geometry provides the basis for studying interface structure, diffusion, bonding, residual-stress evolution, and delamination mechanisms after suitable potential validation.</p>
+</div>
+
+<h2>Published Fuel-System Context</h2>
+<p>The following literature figures are included only to connect the atomistic models to the real monolithic-fuel architecture and experimentally observed interface phenomena.</p>
+
+<div class="media-card lit-card">
+<h2>3. Monolithic Fuel Plate Architecture After HIP</h2>
+<img src="Monolithic fuel plate after HIP ,Mehta, A., et al., Journal of Phase Equilibria and Diffusion, 2018. 39(2)p. 246-254..png" alt="Published schematic of monolithic UMo fuel plate after HIP">
+<p class="caption"><b>Literature context:</b> schematic of the HIP-bonded monolithic fuel plate architecture from Mehta et al., <i>Journal of Phase Equilibria and Diffusion</i>, 2018, 39(2), 246-254. This provides the component-scale context for the U-Mo, Zr-barrier, and AA6061 atomistic models.</p>
+</div>
+
+<div class="media-card lit-card">
+<h2>4. Fission-Fragment / Fuel-Matrix Interaction Context</h2>
+<img src="Fission fragment release from fuel matrix (Jeong et al, JNM 2015).png" alt="Published illustration of fission fragment release from UMo fuel matrix">
+<p class="caption"><b>Literature context:</b> published illustration of fission-fragment release and interaction-layer behavior associated with U-Mo fuel systems, from Jeong et al., <i>Journal of Nuclear Materials</i> (2015). It motivates future extensions toward irradiation-driven transport and post-irradiation interface behavior.</p>
+</div>
+
+<hr>
+<p><i>Model-construction images are distinguished from validated quantitative results. Diffusion coefficients, interface stresses, bond strengths, and delamination metrics will only be reported after the corresponding interatomic-potential and property-validation steps are completed.</i></p>
 </main>
 </div>
 <footer class="site-footer"><hr><p>© 2026 Mustafa Azeem. All rights reserved.</p></footer>
