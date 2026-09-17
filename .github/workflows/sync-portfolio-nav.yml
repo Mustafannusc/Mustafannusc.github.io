@@ -101,6 +101,42 @@ jobs:
 
           print('Updated:', ', '.join(changed) if changed else 'none')
 
+      - name: Compact global sidebar navigation spacing
+        shell: python
+        run: |
+          from pathlib import Path
+
+          path = Path('style.css')
+          text = path.read_text(encoding='utf-8')
+          original = text
+
+          text = text.replace(
+              '.nav li {\n    margin-bottom: 8px;\n}',
+              '.nav li {\n    margin-bottom: 2px;\n}',
+              1,
+          )
+          text = text.replace(
+              '.nav a {\n    display: block;\n    padding: 7px 10px;',
+              '.nav a {\n    display: block;\n    padding: 4px 8px;',
+              1,
+          )
+          text = text.replace(
+              '    margin-bottom: 25px;\n    font-size: 20px;',
+              '    margin-bottom: 12px;\n    font-size: 20px;',
+              1,
+          )
+          text = text.replace(
+              '    margin: 0 0 12px 0;\n    padding: 0;',
+              '    margin: 0 0 7px 0;\n    padding: 0;',
+              1,
+          )
+
+          if text != original:
+              path.write_text(text, encoding='utf-8')
+              print('Compacted sidebar spacing in style.css')
+          else:
+              print('Sidebar spacing already compact')
+
       - name: Commit navigation updates
         run: |
           if git diff --quiet; then
@@ -109,6 +145,6 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add '*.html' 'portfolio/**/*.html'
-          git commit -m "Sync full navigation across portfolio pages"
+          git add '*.html' 'portfolio/**/*.html' 'style.css'
+          git commit -m "Sync navigation and compact sidebar spacing"
           git push
