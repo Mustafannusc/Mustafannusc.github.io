@@ -16,15 +16,15 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Add Research Portfolio link to root HTML pages
+      - name: Sync full navigation across site and portfolio pages
         shell: python
         run: |
           from pathlib import Path
           import re
 
-          portfolio_link = '      <li><a href="portfolio/index.html">Research Portfolio</a></li>'
           changed = []
 
+          # Keep the Research Portfolio link on root-level HTML pages.
           for path in Path('.').glob('*.html'):
               text = path.read_text(encoding='utf-8')
               if 'portfolio/index.html' in text:
@@ -44,6 +44,51 @@ jobs:
                   path.write_text('\n'.join(lines) + ending, encoding='utf-8')
                   changed.append(str(path))
 
+          # Portfolio/project pages should retain their project-specific links,
+          # while also showing the complete site navigation visible on Homepage.
+          global_after = [
+              ('Teaching', '/teaching.html'),
+              ('Grants & Funding', '/grants.html'),
+              ('Code & Tools', '/code.html'),
+              ('References & Service', '/references.html'),
+              ('Reviewer & Editorial Service', '/reviewer-service.html'),
+              ('Gallery', '/gallery.html'),
+              ('Contact', '/contact.html'),
+              ('Services', '/services.html'),
+          ]
+
+          for path in Path('portfolio').rglob('*.html'):
+              text = path.read_text(encoding='utf-8')
+              m = re.search(r'(<ul class="nav">)(.*?)(</ul>)', text, flags=re.S)
+              if not m:
+                  continue
+
+              block = m.group(2)
+              original_block = block
+
+              # Add Biography after Homepage if this older project navigation omits it.
+              if '>Biography</a>' not in block:
+                  block = re.sub(
+                      r'(<li><a(?: class="active")? href="[^"]*index\.html">Homepage</a></li>)',
+                      r'\1\n<li><a href="/biography.html">Biography</a></li>',
+                      block,
+                      count=1,
+                  )
+
+              # Append any missing global links after project-specific navigation.
+              additions = []
+              for label, href in global_after:
+                  if f'>{label}</a>' not in block:
+                      additions.append(f'<li><a href="{href}">{label}</a></li>')
+
+              if additions:
+                  block = block.rstrip() + '\n' + '\n'.join(additions) + '\n'
+
+              if block != original_block:
+                  new_text = text[:m.start(2)] + block + text[m.end(2):]
+                  path.write_text(new_text, encoding='utf-8')
+                  changed.append(str(path))
+
           print('Updated:', ', '.join(changed) if changed else 'none')
 
       - name: Commit navigation updates
@@ -54,6 +99,6 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add '*.html'
-          git commit -m "Add Research Portfolio link across site navigation"
+          git add '*.html' 'portfolio/**/*.html'
+          git commit -m "Sync full navigation across portfolio pages"
           git push
