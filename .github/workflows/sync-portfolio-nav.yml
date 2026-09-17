@@ -137,6 +137,41 @@ jobs:
           else:
               print('Sidebar spacing already compact')
 
+      - name: Compact global page vertical spacing
+        shell: python
+        run: |
+          from pathlib import Path
+
+          path = Path('style.css')
+          text = path.read_text(encoding='utf-8')
+          original = text
+
+          replacements = [
+              ('    padding: 30px 28px;\n}', '    padding: 18px 24px;\n}'),
+              ('    margin-top: 30px;\n    margin-bottom: 10px;', '    margin-top: 18px;\n    margin-bottom: 7px;'),
+              ('p {\n    margin: 10px 0;\n}', 'p {\n    margin: 6px 0;\n}'),
+              ('ul {\n    margin-top: 10px;\n    margin-bottom: 20px;', 'ul {\n    margin-top: 6px;\n    margin-bottom: 12px;'),
+              ('li {\n    margin-bottom: 6px;\n}', 'li {\n    margin-bottom: 4px;\n}'),
+              ('    margin: 15px 0 25px 0;\n}', '    margin: 8px 0 14px 0;\n}'),
+              ('    margin: 0 0 24px 0;\n    padding: 18px 22px;', '    margin: 0 0 12px 0;\n    padding: 12px 18px;'),
+              ('    padding: 28px 30px;\n    margin-bottom: 28px;', '    padding: 20px 24px;\n    margin-bottom: 14px;'),
+              ('    margin-bottom: 24px;\n    padding: 22px 26px;', '    margin-bottom: 14px;\n    padding: 16px 20px;'),
+              ('    margin-bottom: 18px;\n}', '    margin-bottom: 10px;\n}'),
+              ('    margin: 12px 0 20px 0;\n}', '    margin: 8px 0 12px 0;\n}'),
+          ]
+
+          for old, new in replacements:
+              text = text.replace(old, new, 1)
+
+          # Compact common section-heading boxes without changing typography.
+          text += '''\n/* ==========================================================\n   GLOBAL COMPACT VERTICAL RHYTHM\n   Reduces unused whitespace while preserving page hierarchy.\n   ========================================================== */\n.content > h2,\n.home-card > h2,\n.teaching-section > h2,\n.review-year > h2,\n.pub-year > h2 {\n    margin-top: 14px !important;\n    margin-bottom: 7px !important;\n    padding-top: 6px !important;\n    padding-bottom: 6px !important;\n}\n\n.home-card {\n    margin-top: 10px !important;\n    margin-bottom: 12px !important;\n}\n\n.content > hr {\n    margin-top: 7px !important;\n    margin-bottom: 12px !important;\n}\n\n@media (max-width: 800px) {\n    .content {\n        padding-top: 8px !important;\n        padding-bottom: 12px !important;\n    }\n\n    .content > h1:first-child {\n        margin-bottom: 7px !important;\n    }\n}\n'''
+
+          if text != original:
+              path.write_text(text, encoding='utf-8')
+              print('Compacted global page spacing in style.css')
+          else:
+              print('Global page spacing already compact')
+
       - name: Commit navigation updates
         run: |
           if git diff --quiet; then
@@ -146,5 +181,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add '*.html' 'portfolio/**/*.html' 'style.css'
-          git commit -m "Sync navigation and compact sidebar spacing"
+          git commit -m "Sync navigation and compact site spacing"
           git push
