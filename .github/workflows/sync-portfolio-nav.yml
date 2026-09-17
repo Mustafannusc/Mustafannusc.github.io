@@ -73,7 +73,6 @@ jobs:
               block = m.group(2)
               original_block = block
 
-              # Insert any missing global links before Research Portfolio.
               before_additions = []
               for label, href in global_before:
                   if f'>{label}</a>' not in block:
@@ -85,7 +84,6 @@ jobs:
                       insert_text = '\n'.join(before_additions) + '\n'
                       block = block[:portfolio_line.start()] + insert_text + block[portfolio_line.start():]
 
-              # Append missing global links after project-specific navigation.
               after_additions = []
               for label, href in global_after:
                   if f'>{label}</a>' not in block:
@@ -137,49 +135,162 @@ jobs:
           else:
               print('Sidebar spacing already compact')
 
-      - name: Compact global page vertical spacing
+      - name: Compact vertical spacing across all main pages
         shell: python
         run: |
           from pathlib import Path
+          import re
 
           path = Path('style.css')
           text = path.read_text(encoding='utf-8')
           original = text
 
-          replacements = [
-              ('    padding: 30px 28px;\n}', '    padding: 18px 24px;\n}'),
-              ('    margin-top: 30px;\n    margin-bottom: 10px;', '    margin-top: 18px;\n    margin-bottom: 7px;'),
-              ('p {\n    margin: 10px 0;\n}', 'p {\n    margin: 6px 0;\n}'),
-              ('ul {\n    margin-top: 10px;\n    margin-bottom: 20px;', 'ul {\n    margin-top: 6px;\n    margin-bottom: 12px;'),
-              ('li {\n    margin-bottom: 6px;\n}', 'li {\n    margin-bottom: 4px;\n}'),
-              ('    margin: 15px 0 25px 0;\n}', '    margin: 8px 0 14px 0;\n}'),
-              ('    margin: 0 0 24px 0;\n    padding: 18px 22px;', '    margin: 0 0 12px 0;\n    padding: 12px 18px;'),
-              ('    padding: 28px 30px;\n    margin-bottom: 28px;', '    padding: 20px 24px;\n    margin-bottom: 14px;'),
-              ('    margin-bottom: 24px;\n    padding: 22px 26px;', '    margin-bottom: 14px;\n    padding: 16px 20px;'),
-              ('    margin-bottom: 18px;\n}', '    margin-bottom: 10px;\n}'),
-              ('    margin: 12px 0 20px 0;\n}', '    margin: 8px 0 12px 0;\n}'),
-          ]
+          # Remove any previous generated compact-spacing blocks so the workflow is idempotent.
+          text = re.sub(
+              r'\n?/\* === GLOBAL MAIN-PAGE COMPACT SPACING START === \*/.*?/\* === GLOBAL MAIN-PAGE COMPACT SPACING END === \*/\n?',
+              '\n',
+              text,
+              flags=re.S,
+          )
+          text = re.sub(
+              r'\n?/\* ==========================================================\n   GLOBAL COMPACT VERTICAL RHYTHM.*?@media \(max-width: 800px\) \{.*?\n\}\n',
+              '\n',
+              text,
+              flags=re.S,
+          )
 
-          for old, new in replacements:
-              text = text.replace(old, new, 1)
+          compact = r'''
+/* === GLOBAL MAIN-PAGE COMPACT SPACING START === */
+/* Applies consistently from Homepage through Services while preserving typography. */
 
-          # Compact common section-heading boxes without changing typography.
-          text += '''\n/* ==========================================================\n   GLOBAL COMPACT VERTICAL RHYTHM\n   Reduces unused whitespace while preserving page hierarchy.\n   ========================================================== */\n.content > h2,\n.home-card > h2,\n.teaching-section > h2,\n.review-year > h2,\n.pub-year > h2 {\n    margin-top: 14px !important;\n    margin-bottom: 7px !important;\n    padding-top: 6px !important;\n    padding-bottom: 6px !important;\n}\n\n.home-card {\n    margin-top: 10px !important;\n    margin-bottom: 12px !important;\n}\n\n.content > hr {\n    margin-top: 7px !important;\n    margin-bottom: 12px !important;\n}\n\n@media (max-width: 800px) {\n    .content {\n        padding-top: 8px !important;\n        padding-bottom: 12px !important;\n    }\n\n    .content > h1:first-child {\n        margin-bottom: 7px !important;\n    }\n}\n'''
+.content {
+    padding-top: 18px !important;
+    padding-bottom: 18px !important;
+}
+
+.content > h1:first-child,
+.home-hero,
+.publications-hero,
+.teaching-hero,
+.reviewer-hero,
+.grants-hero {
+    margin-bottom: 12px !important;
+}
+
+.content > h1:first-child {
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+}
+
+.content > h2,
+.home-card > h2,
+.teaching-section > h2,
+.review-year > h2,
+.pub-year > h2,
+.grant-year > h2 {
+    margin-top: 12px !important;
+    margin-bottom: 6px !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+}
+
+.content p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.content ul,
+.content ol {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.content li {
+    margin-bottom: 3px;
+}
+
+.content > hr,
+.content section > hr {
+    margin-top: 7px !important;
+    margin-bottom: 10px !important;
+}
+
+.home-card,
+.paper-entry,
+.teaching-card,
+.teaching-wide-card,
+.publication-note,
+.reviewer-note,
+.grant-card,
+.impact-card,
+.card,
+.media-card {
+    margin-top: 8px !important;
+    margin-bottom: 10px !important;
+}
+
+.home-card {
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+}
+
+.teaching-section,
+.pub-year,
+.review-year,
+.grant-year {
+    margin-top: 18px !important;
+    margin-bottom: 20px !important;
+}
+
+.profile-links {
+    margin-top: 8px !important;
+    margin-bottom: 10px !important;
+}
+
+@media (max-width: 800px) {
+    .content {
+        padding-top: 8px !important;
+        padding-bottom: 12px !important;
+    }
+
+    .content > h1:first-child,
+    .home-hero,
+    .publications-hero,
+    .teaching-hero,
+    .reviewer-hero,
+    .grants-hero {
+        margin-bottom: 7px !important;
+    }
+
+    .content > h2,
+    .home-card > h2,
+    .teaching-section > h2,
+    .review-year > h2,
+    .pub-year > h2,
+    .grant-year > h2 {
+        margin-top: 9px !important;
+        margin-bottom: 5px !important;
+    }
+}
+/* === GLOBAL MAIN-PAGE COMPACT SPACING END === */
+'''
+
+          text = text.rstrip() + '\n' + compact
 
           if text != original:
               path.write_text(text, encoding='utf-8')
-              print('Compacted global page spacing in style.css')
+              print('Applied compact spacing globally from Homepage through Services')
           else:
-              print('Global page spacing already compact')
+              print('Global compact spacing already current')
 
       - name: Commit navigation updates
         run: |
           if git diff --quiet; then
-            echo "No navigation updates needed."
+            echo "No navigation or spacing updates needed."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add '*.html' 'portfolio/**/*.html' 'style.css'
-          git commit -m "Sync navigation and compact site spacing"
+          git commit -m "Sync navigation and compact spacing across all main pages"
           git push
